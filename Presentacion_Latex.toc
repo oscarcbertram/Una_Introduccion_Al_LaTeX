@@ -1,0 +1,53 @@
+\beamer@endinputifotherversion {3.27pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Introducci\'on}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{\IeC {\textquestiondown }Qu\'e es esto del \textlatin {\LaTeX }?}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{\IeC {\textquestiondown }Por qu\'e utilizarlo?}{11}{0}{1}
+\beamer@subsectionintoc {1}{3}{\IeC {\textquestiondown }Merece la pena?}{25}{0}{1}
+\beamer@sectionintoc {2}{\IeC {\textquestiondown }C\'omo empiezo?}{33}{0}{2}
+\beamer@subsectionintoc {2}{1}{Modo de funcionamiento}{34}{0}{2}
+\beamer@subsectionintoc {2}{2}{Los requerimientos}{38}{0}{2}
+\beamer@sectionintoc {3}{El documento}{46}{0}{3}
+\beamer@subsectionintoc {3}{1}{Un ejemplo}{47}{0}{3}
+\beamer@subsectionintoc {3}{2}{El fichero fuente}{48}{0}{3}
+\beamer@subsectionintoc {3}{3}{El pre\'ambulo}{51}{0}{3}
+\beamer@subsectionintoc {3}{4}{El cuerpo}{100}{0}{3}
+\beamer@subsectionintoc {3}{5}{Clases de documentos}{128}{0}{3}
+\beamer@subsectionintoc {3}{6}{\IeC {\textexclamdown }Manos a la obra!}{134}{0}{3}
+\beamer@sectionintoc {4}{Partes del documento}{137}{0}{4}
+\beamer@subsectionintoc {4}{1}{Portada}{146}{0}{4}
+\beamer@subsectionintoc {4}{2}{\'Indices}{156}{0}{4}
+\beamer@subsectionintoc {4}{3}{Resumen}{164}{0}{4}
+\beamer@subsectionintoc {4}{4}{Cuerpo}{167}{0}{4}
+\beamer@subsectionintoc {4}{5}{Anexos}{182}{0}{4}
+\beamer@subsectionintoc {4}{6}{Bibliograf\IeC {\'\i }a}{187}{0}{4}
+\beamer@subsectionintoc {4}{7}{\IeC {\textexclamdown }Manos a la obra!}{197}{0}{4}
+\beamer@sectionintoc {5}{Entornos}{205}{0}{5}
+\beamer@subsectionintoc {5}{1}{Listas}{206}{0}{5}
+\beamer@subsectionintoc {5}{2}{Notas}{226}{0}{5}
+\beamer@subsectionintoc {5}{3}{Alineaci\'on del texto}{232}{0}{5}
+\beamer@subsectionintoc {5}{4}{Tablas}{238}{0}{5}
+\beamer@subsectionintoc {5}{5}{\IeC {\textexclamdown }Manos a la obra!}{248}{0}{5}
+\beamer@sectionintoc {6}{Personalizaci\'on}{253}{0}{6}
+\beamer@subsectionintoc {6}{1}{Tipos de letra}{254}{0}{6}
+\beamer@subsectionintoc {6}{2}{Colores}{285}{0}{6}
+\beamer@subsectionintoc {6}{3}{Paginaci\'on de un documento}{294}{0}{6}
+\beamer@subsectionintoc {6}{4}{Referencias cruzadas}{315}{0}{6}
+\beamer@subsectionintoc {6}{5}{\IeC {\textexclamdown }Manos a la obra!}{321}{0}{6}
+\beamer@sectionintoc {7}{Las matem\'aticas}{325}{0}{7}
+\beamer@subsectionintoc {7}{1}{Los s\IeC {\'\i }mbolos en matem\'aticas}{334}{0}{7}
+\beamer@subsectionintoc {7}{2}{Sub\IeC {\'\i }ndices, super\IeC {\'\i }ndices y puntos suspensivos}{345}{0}{7}
+\beamer@subsectionintoc {7}{3}{Fracciones}{358}{0}{7}
+\beamer@subsectionintoc {7}{4}{Ra\IeC {\'\i }ces}{363}{0}{7}
+\beamer@subsectionintoc {7}{5}{Sumatorios e integrales}{367}{0}{7}
+\beamer@subsectionintoc {7}{6}{Matrices}{373}{0}{7}
+\beamer@subsectionintoc {7}{7}{Funciones definidas a tramos}{389}{0}{7}
+\beamer@subsectionintoc {7}{8}{Ecuaciones}{396}{0}{7}
+\beamer@subsectionintoc {7}{9}{\IeC {\textexclamdown }Manos a la obra!}{401}{0}{7}
+\beamer@sectionintoc {8}{Los objetos flotantes}{410}{0}{8}
+\beamer@subsectionintoc {8}{1}{Los cuadros}{423}{0}{8}
+\beamer@subsectionintoc {8}{2}{Las figuras}{425}{0}{8}
+\beamer@subsectionintoc {8}{3}{\IeC {\textexclamdown }Manos a la obra!}{444}{0}{8}
+\beamer@sectionintoc {9}{Conclusi\'on}{454}{0}{9}
+\beamer@subsectionintoc {9}{1}{Queda claro}{455}{0}{9}
+\beamer@subsectionintoc {9}{2}{\IeC {\textquestiondown }Y ahora qu\'e?}{464}{0}{9}

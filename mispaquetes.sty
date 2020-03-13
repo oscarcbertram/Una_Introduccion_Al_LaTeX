@@ -1,0 +1,92 @@
+%-----------------MIS PAQUETES PARA BEAMER---------------------%
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{times}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{ marvosym }
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{adjmulticol}
+\usepackage{epstopdf} 
+\usepackage{multicolsnavigationbar}
+\usepackage[framed,autolinebreaks,useliterate]{mcode}
+\usepackage{listings}
+
+\lstdefinelanguage{mytex}[LaTeX]{TeX}{
+  alsoletter={\\,*,\&, |, ^, _},
+  morekeywords={\\begin,
+                \\end,
+                \\intertext,
+                \\\\,	\\documentclass,	\\title,	\\author,	\\date,	\\thanks,	\\maketitle,	\\part,	\\chapter,
+		\\section,	\\subsection,	\\subsubsection,	\\item,	\\today,	\\large, \\small, \\tiny, \\scriptsize, \\footnotesize, \\normalsize, \\huge, \\LARGE,	\\Large,	\\Huge,	\\today,	\\usepackage,
+		\\bf,	\\sc,	 \\it, \\texttt,	\\LaTeX, \\TeX,	\\micomando, \\newcommand, \\renewcommand, \\newenvironment, \\itshape,
+		\\listtablename, \\listoftables, \\listoffigures, \\tableofcontents, \\vfill, \\vspace, \\hspace, \\bibitem, \\footnote, \\hline, \\newpage, \\addcontentsline, \\textbackslash, \\tt, \\em, \\sffamily, \\rmfamily, \\ttfamily, \\textrm, \\textsf, \\slshape, \\scshape, \\itshape, \\upshape, \\sl,  \\definecolor, \\color, \\textcolor, \\textwidth, \\textheight, \\hoffset, \\voffset, \\evensidemargin, \\oddsidemargin, \\newpage, \\newline, \\frac, \\mathbb, \\mbox, \\displaystyle, \\alpha, \\beta, \\gamma, \\delta, \\epsilon, \\theta, \\vartheta, \\int, \\sqrt, \\sum, \\infty, \\cdots, \\ddots, \\ldots, \\vdots, \\caption, \\label, \\ref, \\pageref, \\includegraphics, \\cos, \\right, \\left, \\neq, \\geq, \\leq, \\partial,
+ },  
+  morekeywords=[2]{figure,
+                tabular, toc,
+                tabulary, wrapfigure,
+                document,
+                minipage,
+		thebibliography,
+                verbatim, quote,
+		titlepage, center,
+                table,
+		itemize,
+		description,
+                enumerate,
+                tikzpicture,
+                preview,
+                alignat*},  
+  literate=*{\{}{\bf{\textcolor{red}{\{}}}{1}
+            {\}}{\bf{\textcolor{red}{\}}}}{1}
+            {[}{\bf{\textcolor{red}{[}}}{1}
+            {]}{\bf{\textcolor{red}{]}}}{1}
+            {\$}{\bf{\textcolor{black!20!red}{\$}}}{1}
+		{\&}{\bf{\textcolor{red}{\&}}}{1}
+		{|}{\bf{\textcolor{blue}{|}}}{1},
+}
+
+\lstset{language=mytex}
+
+\lstdefinestyle{mystyle1}{
+  basicstyle=\fontsize{5}{6}\selectfont\ttfamily,
+  keywordstyle=\bfseries\color{blue},
+  keywordstyle=[2]{\color{blue}},
+  commentstyle=\color{miverdeO}, 
+  stringstyle=\color{orange},
+  identifierstyle=\ttfamily,
+  showstringspaces=true,
+  breaklines=true,
+  tabsize=4,
+  columns=fullflexible,
+  keepspaces=true,
+  backgroundcolor=\color{white}
+}
+\lstset{style=mystyle1}
+\usepackage{pdfpages}
+\usepackage{lipsum}
+\usepackage{caption}
+\DeclareGraphicsExtensions{.eps,.bmp,.png,.pdf,.jpg, .jpeg}
+
+
+
+
+%----------------Míos----------------
+\usepackage{utilmat}
+
+
+
+
+
+
+
+
+

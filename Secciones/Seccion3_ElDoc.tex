@@ -1,0 +1,547 @@
+\section{El documento}
+
+%----------------------------------------%----------------------------------------%----------------------------------------
+\subsection{Un ejemplo}
+\begin{frame}[fragile]{Una carta formal}
+\vspace{-0.7cm}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{lstlisting}
+\documentclass[11pt]{letter} 
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{marvosym}
+\begin{document}% Aquí empieza el documento
+\begin{letter}{Dña. Mónica {\it Limonero Gutiérrez}. Subdirectora de Relaciones Internacionales\\
+{\sc Oficina Información Internacional}:\\
+Dirección y Adjuntía para Movilidad y Extensión Internacional \\
+EMPRESA. Calle Sinesio Gordito. \\
+280XX MADRID,  ESPAÑA} 
+\begin{center}% Este entorno centra lo que incluye
+\large\bf Perico del Dedo Delgado \\
+Calle del Hambre, 5, piso 1, puerta A\\ Jaén, España \\ +34 600 00 00 XX\\ 
+pededo\MVAt delgado.com
+\end{center} 
+\signature{Perico del Dedo Delgado}
+\opening{Estimada Sra. Limonero,} 
+Lorem ipsum % Texto modelo
+A la espera de una respuesta, quedo a su entera disposición para facilitarles cualquier información complementaria.
+\closing{Reciban un cordial saludo, }
+\encl{Documentos que puedan ser de su interés} 
+\end{letter}
+\end{document}
+\end{lstlisting}
+
+
+\column{0.5\textwidth}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{FigurasEjemplos/CartaREC.pdf}
+\label{fig:EjemploCarta}
+\end{figure}
+\end{columns}
+\end{frame}
+
+
+%----------------------------------------%----------------------------------------%----------------------------------------
+\subsection{El fichero fuente}
+
+\begin{frame}{El fichero fuente: el editor}
+\pause Encontramos dos partes bien diferenciadas:
+\pause
+\begin{center}
+\begin{tabular}{rl}
+Preámbulo
+&
+$\left\{ \begin{array}{l}
+	\mbox{\texttt{\textbackslash  documentclass[<{\em opciones}>]\{<clase>\}}}\\
+	\mbox{\texttt{\textbackslash usepackage[<{\em opciones}>]\{<paquete>\}}}\\
+	\mbox{\vdots}\\
+	\mbox{\texttt{\textbackslash usepackage[<{\em opciones}>]\{<paquete>\}}}\\
+	\mbox{\texttt{\% Macros}}\\
+	\end{array} \right. $
+\par\\
+\\
+Cuerpo
+&
+$\left\{ \begin{array}{l}
+	\mbox{\texttt{\textbackslash begin\{document\}}}\\
+	\mbox{\texttt{\hspace{1cm}\textbackslash section\{}La comida\texttt{\}}}\\
+	\mbox{\texttt{\hspace{1cm}\textbackslash subsection\{}La fruta\texttt{\}}}\\
+	\mbox{\texttt{\hspace{1cm}\textbackslash subsubsection\{}Las manzanas\texttt{\}}}\\
+	\mbox{\texttt{\textbackslash end\{document\}}}
+	\end{array} \right. $
+\end{tabular}
+\end{center}
+\end{frame}
+%----------------------------------------%----------------------------------------%----------------------------------------
+\subsection{El preámbulo}
+
+\begin{frame}{Definición del documento: las opciones (I)}
+\pause
+Es la primera línea de código que escribiremos. Aquí se localizarán las características del documento, tamaño de papel, tipo de documento, \ldots
+\pause 
+\begin{sintax}{\texttt{\textbackslash documentclass}}
+\texttt{\textbackslash documentclass[<{\em opciones}>]\{<clase>\}}
+\end{sintax}
+
+\pause
+\begin{ejem}{\texttt{\textbackslash documentclass}}
+\texttt{\textbackslash documentclass[10pt, a4paper, landscape, openright]\{book\}}
+\texttt{\textbackslash documentclass[10pt, a4paper]\{article\}}
+\end{ejem}
+\pause
+Las opciones son:
+\begin{multicols}{3}
+\begin{itemize}
+\item Tamaño de la fuente
+\item Tamaño y formato del papel
+\item Estilo multicolumna
+\item Estilo de numeración de las ecuaciones
+\item Modo apaisado
+\item Página de apertura de capítulo
+\item Página para portada
+\item Impresión a dos caras
+\end{itemize}
+\end{multicols}
+\end{frame}
+
+\begin{frame}{Definición del documento: las opciones (II)}
+\pause
+\begin{acla}{Tamaño de letra}
+Valores posibles: \texttt{10pt (default), 11pt, 12pt}.
+Suficiente para casi cualquier tipo de documento.
+\texttt{\textbackslash usepackage\{extsizes\}} amplia la gama.
+\end{acla}
+
+\pause
+\begin{acla}{Tamaño y formato del papel}
+Valores posibles: \texttt{a4paper (default), letterpaper, a5paper, b5paper, executivepaper, legalpaper}.
+\texttt{\textbackslash usepackage\{geometry\}} amplia los tipos.
+\end{acla}
+
+\pause
+\begin{acla}{Borrador o definitivo}
+Valores posibles: \texttt{draft, final}.
+\end{acla}
+
+\pause
+\begin{acla}{Columnas}
+Valores posibles: \texttt{onecolumn (default), multicolumn}.
+\texttt{\textbackslash usepackage\{multicols\}} amplia las posibilidades.
+\end{acla}
+\end{frame}
+\begin{frame}{Definición del documento: las opciones (III)}
+\vspace{-0.18cm}
+\pause
+\begin{acla}{Ecuaciones}
+Valores posibles (indep.): \texttt{fleqn} (alineados a la izq.), \texttt{leqno} (etiquetas a la izq.).
+\end{acla}
+
+\pause
+\begin{acla}{Vertical o apaisado}
+Valores posibles: \texttt{landscape} (apaisado). Su omisión implica formato vertical.
+\end{acla}
+
+\pause
+\begin{acla}{Doble cara}
+Valores posibles: \texttt{oneside} (defalut en {\em article} y {\em report}), \texttt{twosides} (default en {\em book}).
+\end{acla}
+
+\pause
+\begin{acla}{Portada}
+Valores posibles: \texttt{notitlepage} (defalut en {\em article}), \texttt{titlepage} (default en {\em book}  y en {\em report}).
+\end{acla}
+
+\pause
+\begin{acla}{Apertura de capítulos}
+Valores posibles: \texttt{openany} (defalut en {\em report}), \texttt{openright} (default en {\em book}). {\em article} {\color{red}NO soporta el comando \texttt{\textbackslash chapter}}
+\end{acla}
+\end{frame}
+
+\begin{frame}{Los paquetes}
+\begin{itemize}
+\item \pause Son los equivalentes a las librerías de \texttt{C} o \texttt{C++}.
+\item \pause Existen muchísimos, y muchos de ellas {\color{red} muy prácticos}.
+\item \pause También puedes crear tu propia librería o {\em archivo de estilo (\texttt{.sty})}.
+\end{itemize}
+\pause 
+\begin{sintax}{\texttt{\textbackslash usepackage}}
+\texttt{\textbackslash usepackage[<{\em opciones}>]\{<nombre del paquete>\}}
+\end{sintax}
+
+\pause
+\begin{ejem}{\texttt{\textbackslash usepackage}}
+\texttt{\textbackslash usepackage[framed,autolinebreaks,useliterate]\{mcode\}}
+\texttt{\textbackslash usepackage[latin1]\{inputenc\}}
+\end{ejem}
+\pause
+\begin{itemize}
+\item \pause Aquí las opciones dependen del paquete en concreto.
+\item \pause De forma general, habrá que instalarlos (con MiK\TeX{} ir a \textbf{Inicio$\rightarrow$Todos los programas$\rightarrow$MikTeX$\rightarrow$Maintenance (admin)$\rightarrow$Package Manager (Admin)}).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Las definiciones (o macros)}
+\begin{itemize}
+\item \pause Sirven para enseñar a \LaTeX{} cómo escribir lo que queramos, como queramos y de forma cómoda.
+\item \pause Básicamente se distinguen dos:
+\begin{itemize}
+\item \pause Los comandos (\texttt{\textbackslash newcommand} y \texttt{\textbackslash renewcommand}).
+\item \pause Los entornos (\texttt{\textbackslash newenvironment}).
+\end{itemize}
+\end{itemize}
+\pause 
+\begin{sintax}{\texttt{\textbackslash newcommand}}
+\texttt{\textbackslash newcommand\{<{\em nombre comando}>\}[<{\em número}>]\{<{\em definición}>\}}
+\end{sintax}
+\pause
+\begin{sintax}{\texttt{\textbackslash renewcommand}}
+\texttt{\textbackslash renewcommand\{<{\em comando}>\}[<{\em número}>]\{<{\em redefinición}>\}}
+\end{sintax}
+\pause
+\begin{sintax}{\texttt{\textbackslash newenvironement}}
+\texttt{\textbackslash newenvironment\{<{\em nombre}>\}[<{\em número}>]\{<{\em antes}>\}\{<{\em después}>\}}
+\end{sintax}
+
+\end{frame}
+
+
+
+
+%newcommand
+\begin{frame}[fragile]{\small \texttt{\textbackslash newcommand\{<{\em nombre comando}>\}[<{\em número}>]\{<{\em definición}>\}}}
+\begin{itemize}
+\item \pause \texttt{\em nombre comando}: Es el código con el que se va a escribir lo que queramos, por ejemplo \texttt{\textbackslash LaTeX} da lugar a \LaTeX.
+\item \pause \texttt{\em número}: número de argumentos que recibe el comando.
+\item \pause\texttt{\em definición}: Aquí se pone lo que se tiene que hacer al escribir el comando.
+\end{itemize}
+\pause
+\begin{ejem}{\texttt{\textbackslash newcommand}}
+
+\begin{columns}
+\column{0.4\textwidth}
+
+\begin{lstlisting}
+\newcommand{\micomando}[1] {
+ Este ejemplo en  \LaTeX{} trata de #1}
+
+% EN EL CUERPO DEL DOCUMENTO:
+\begin{itemize}
+\item \micomando{comandos}.
+\end{itemize}
+\end{lstlisting}
+\column{0.49\textwidth}
+\begin{itemize}
+\item Este ejemplo en  \LaTeX{} trata de comandos.
+\end{itemize}
+\end{columns}
+\end{ejem}
+\end{frame}
+
+% renewcommand
+\begin{frame}[fragile]{\small \texttt{\textbackslash renewcommand\{<{\em nombre comando}>\}[<{\em número}>]\{<{\em redefinición}>\}}}
+\begin{itemize}
+\item \pause \texttt{\em nombre comando}: Es el nuevo código con el que nos referiremos a un código antiguo.
+\item \pause \texttt{\em número}: número de argumentos que recibe el comando.
+\item \pause\texttt{\em redefinición}: Aquí se pone lo que se quiere  hacer al escribir el comando, en lugar de lo que se venía haciendo hasta ahora.
+\end{itemize}
+\pause
+\begin{ejem}{\texttt{\textbackslash renewcommand}}
+
+\begin{columns}
+\column{0.4\textwidth}
+\begin{lstlisting}
+\renewcommand{\labelitemi}{$\star$}
+% EN EL CUERPO DEL DOCUMENTO:
+\begin{itemize}
+\item Punto uno.
+\item Punto dos.
+\end{itemize}
+\end{lstlisting}
+
+\column{0.49\textwidth}
+{\bf Antes:}
+\begin{itemize}
+\item Punto uno.
+\item Punto dos.
+\end{itemize}
+
+{\bf Después:}
+\begin{itemize}
+\item [$\star$] Punto uno.
+\item [$\star$] Punto dos.
+\end{itemize}
+
+\end{columns}
+\end{ejem}
+\end{frame}
+
+% newenvironment
+\begin{frame}[fragile]{\small \texttt{\textbackslash newenvironment\{<{\em nombre}>\}[<{\em número args.}>]\{<{\em antes}>\}\{<{\em después}>\}}}
+\begin{itemize}
+\item \pause \texttt{\em nombre}: Es el nombre del entorno.
+\item \pause \texttt{\em número args.}: número de argumentos que recibe el entorno.
+\item \pause\texttt{\em antes}: Lo que se ejecuta antes de compilar el entorno.
+\item \pause \texttt{\em después}: Lo 	que se ejecuta al salir del entorno.
+\end{itemize}
+\pause
+\begin{ejem}{\texttt{\textbackslash newenvironment}}
+
+\begin{columns}
+\column{0.4\textwidth}
+\begin{lstlisting}
+\newenvironment{cita}[1]		%recibe un argumento, para el autor
+{\begin{quote}\itshape}		% definición de la entrada al entorno
+{\end{quote}\centerline{#1}}	% salida del entorno
+% EN EL CUERPO DEL DOCUMENTO:
+\begin{cita}{Confucio}
+La ignorancia es la noche de la mente: pero una noche sin luna y sin estrellas.
+\end{cita}
+\end{lstlisting}
+
+\column{0.49\textwidth}
+\begin{quote}
+{\it La ignorancia es la noche de la mente: pero una noche sin luna y sin estrellas.}
+\end{quote}
+\centerline{Confucio}
+
+\end{columns}
+\end{ejem}
+\end{frame}
+%----------------------------------------%----------------------------------------%----------------------------------------
+\subsection{El cuerpo}
+
+\begin{frame}{Órdenes y declaraciones}
+\begin{itemize}
+\item \pause Todo aquello comprendido entre \texttt{\backS begin\{document\}} y \texttt{\backS end\{document\}} es el cuerpo del documento.
+\item \pause El cuerpo se constituye por:
+\begin{itemize}
+\item Texto
+\item Instrucciones propias (palabras clave de \LaTeX{})
+\end{itemize}
+\item \pause Las \alert{instrucciones} propias tienen un \alert{efecto local}
+\end{itemize}
+
+\begin{defi}{Órdenes y declaraciones}
+Llamaremos {\color{miverdeO}órdenes} y {\color{miverdeO}declaraciones} a aquellas instrucciones que tienen efecto sobre el texto, como por ejemplo los {\it grupos}, los {\it comandos} y los {\it entornos}.
+\end{defi}
+\end{frame}
+
+\begin{frame}[fragile]{Los grupos}
+\begin{itemize}
+\item \pause Son cualquier \alert{parte} del documento \alert{DELIMITADA}.
+\item \pause Limitadores:
+\begin{itemize}
+\item Llaves (\texttt{\{} y \texttt{\}})
+\item Inicio y final de entorno (\texttt{\backS begin\{<{\it nombre del entorno}>\}} y \texttt{\backS end\{<{\it nombre del entorno}>\}})
+\end{itemize}
+\end{itemize}
+\pause
+\begin{ejem}{Grupo delimitado por entorno (\texttt{itemize}) y llaves}
+
+\begin{columns}[c]
+
+\column{0.45\textwidth}
+\begin{lstlisting}
+\begin{itemize}
+\item  Me gustan las manzanas de color {\color{red} rojo}.
+\item  Pues a mi los textos en {\bf negrita} y en {\it itálica}.
+\end{itemize}
+\end{lstlisting}
+
+\column{0.45\textwidth}
+\begin{itemize}
+\item  Me gustan las manzanas de color {\color{red} rojo}.
+\item  Pues a mi los textos en {\bf negrita} y en {\it itálica}.
+\end{itemize}
+
+\end{columns}
+\end{ejem}
+
+\end{frame}
+
+\begin{frame}[fragile]{Los comandos}
+\begin{itemize}
+\item \pause Son \alert{órdenes sencillas} que comienzan con una \texttt{\alert{\backS}}, seguida de uno o varios caracteres.
+\item \pause Además, están los diez caracteres reservados de \TeX{}:
+\end{itemize}
+\pause
+\begin{acla}{Los 10 caracteres reservados}
+\hfill\texttt{\%}
+\hfill\texttt{\backS}
+\hfill\texttt{\{}
+\hfill\texttt{\}}
+\hfill\texttt{\&}
+\hfill\texttt{\~{}}
+\hfill\texttt{\$}
+\hfill\texttt{\_}
+\hfill\texttt{\^{}}
+\hfill\texttt{\#}
+\end{acla}
+\pause
+\begin{sintax}{Comandos}
+\texttt{\backS comando[<{\em args. optativos}>]\{>{\em args. obligatorios}>\}}
+\end{sintax}
+\pause
+\begin{ejem}{Algunos comandos}
+\texttt{\backS section[Verduras]\{Las verduras\}} crea una sección de título ``Las verduras'' y en la TOC aparece como ``Verduras''.
+
+\texttt{\backS texttt\{texto\}} permite excribir en formato máquina de escribir: \texttt{texto}.
+
+\texttt{\backS textregistered} produce \textregistered.
+\end{ejem}
+
+\end{frame}
+
+\begin{frame}[fragile]{Los entornos}
+\begin{itemize}
+\item \pause Son \alert{grupos} que gestionan qué hacer al \alert{entrar} y al \alert{salir} de ellos.
+\item \pause Su contenido (argumentos) puede ser muy extenso.
+\end{itemize}
+
+\begin{sintax}{Entornos}
+\texttt{\backS begin\{nom. entorno\}[<{\em args. optativos}>]\{<{\em args. obligatorios}>\}}
+
+{\em Objeto o cuerpo del entorno}
+
+\texttt{\backS end\{nom. entorno\}}
+\end{sintax}
+\begin{ejem}{Entorno para justificar a la derecha}
+\begin{columns}[c]
+
+\column{0.45\textwidth}
+\begin{lstlisting}
+\begin{flushright}
+Este es un texto justificado \\% cambio de línea
+a la derecha
+\end{flushright}
+\end{lstlisting}
+
+\column{0.45\textwidth}
+\begin{flushright}
+Este es un texto justificado \\% cambio de línea
+a la derecha
+\end{flushright}
+\end{columns}
+\end{ejem}
+\end{frame}
+
+%----------------------------------------%----------------------------------------%----------------------------------------
+
+\begin{frame}{Recapitulación}
+\pause Encontramos dos partes bien diferenciadas en el código fuente de un documento:
+\begin{center}
+\begin{tabular}{rl}
+\uncover<2->{Preámbulo}
+&
+\uncover<3->{$\left\{ \begin{array}{l}
+	\uncover<4->{\mbox{Clase de documento (\texttt{\backS documentclass})}}\\
+	\uncover<5->{\mbox{Paquetes (\texttt{\backS usepackage})}}\\
+	\uncover<6->{\mbox{Macros}}\uncover<7->{\left\{ \begin{array}{l}
+		\uncover<7->{\mbox{\texttt{\backS newcommand}}}\\
+		\uncover<7->{\mbox{\texttt{\backS renewcommand}}}\\
+		\uncover<7->{\mbox{\texttt{\backS newenvironment}}}\\
+		\end{array} \right. }
+	\end{array} \right. $}
+\par\\
+\\
+\uncover<8->{Cuerpo}
+&
+\uncover<9->{
+$\left\{\begin{array}{l}
+	\uncover<9->{\mbox{Grupos}}\\
+	\uncover<10->{\mbox{Comandos (\texttt{\backS comando})}}\\
+	\uncover<11->{\mbox{Entornos (\texttt{\backS begin\{{\em entorno}\}\ldots\backS end\{{\em entorno}\}})}}\\
+	\end{array} \right. $}
+\end{tabular}
+\end{center}
+\end{frame}
+%----------------------------------------%----------------------------------------%----------------------------------------
+
+%----------------------------------------
+\subsection{Clases de documentos}
+\begin{frame}[fragile]{Clases de documentos}
+\uncover<1->{
+\begin{defi}{Artículo}
+Trabajos cortos (10 o 20 páginas). Adecuado para publicar en revistas técnicas y de investigación.
+\only<2>{
+\vspace{-0.1cm}
+\begin{center}
+\begin{minipage}{0.9\textwidth}
+\begin{acla}{Opciones por defecto}
+\texttt{\backS documentclass[10pt, letterpaper, final, oneside, onecolumn, notitlepage]\{article\}}
+\end{acla}
+\end{minipage}
+\end{center}}
+\end{defi}}
+
+\uncover<3->{
+\begin{defi}{Report}
+Trabajos grandes: tesis, proyectos, apuntes, memorias, narración corta, informes, \ldots
+\only<4>{
+\begin{center}
+\begin{minipage}{0.9\textwidth}
+\begin{acla}{Opciones por defecto}
+\texttt{\backS documentclass[10pt, letterpaper, final, oneside, openany, onecolumn, titlepage]\{article\}}
+\end{acla}
+\end{minipage}
+\end{center}}
+\end{defi}}
+
+\uncover<5->{
+\begin{defi}{Book}
+Trabajos muy grandes. Destinado a libros y documentos susceptibles de publicación.
+\only<6>{
+\begin{center}
+\begin{minipage}{0.9\textwidth}
+\begin{acla}{Opciones por defecto}
+\texttt{\backS documentclass[10pt, letterpaper, final, twoside, openright,  onecolumn, titlepage]\{article\}}
+\end{acla}
+\end{minipage}
+\end{center}}
+\end{defi}}
+\end{frame}
+
+\subsection{¡Manos a la obra!}
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report}
+\only<1>{¡Manos a la obra! Escribiremos a lo largo del curso una memoria para practicar y ampliar conocimientos.}
+\only<2>{
+\begin{center}
+\vspace{-0.25cm}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[height=0.9\textheight, page=1]{FigurasEjemplos/Ejercicio1}}
+\end{figure}
+\end{center}
+}
+\end{frame}
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report}
+\vspace{-0.5cm}
+\begin{lstlisting}
+%PAQUETES Y CONFIGURACIÓN DEL DOCUMENTO (PREÁMBULO)
+\documentclass[11pt, twoside, a4paper]{report}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\newcommand{\micomando}[1]{Esta es la frase predefinida en mi comando, y mi nombre es #1}
+%EL CUERPO
+\begin{document}
+%Contenido
+En este primer ejercicio escribiremos en {\bf negrita}, en {\it cursiva o itálica} y en tipo {\sc small caps}. En cuanto a los entornos, diremos tres cosas:
+\begin{itemize}
+\item Esta es la primera cosa.
+\item Esta es la segunda cosa.
+\item Esta es la tercera cosa, y la más importante de todas.
+\end{itemize}
+Por otra parte, utilizaremos nuestro primer comando: \micomando{Oscar}.
+\begin{center}
+{\LARGE ¡Me encanta esto del \LaTeX{}!}
+\end{center}
+\end{document}
+\end{lstlisting}%
+
+\end{frame}
+

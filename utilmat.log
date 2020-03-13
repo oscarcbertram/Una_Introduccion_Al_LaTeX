@@ -1,0 +1,14 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdftex 2010.11.12)  12 NOV 2010 16:20
+entering extended mode
+**C:/Users/Oscar/Documents/My*PCTeX*Files/Primeros*(de*Carmen)/utilmat.sty
+("C:/Users/Oscar/Documents/My PCTeX Files/Primeros (de Carmen)/utilmat.sty"
+! Undefined control sequence.
+l.2 \newcommand
+               {\Z}{\mathop{\hbox{\SSI Z\kern-.4em Z}}\nolimits}
+? 
+! Emergency stop.
+l.2 \newcommand
+               {\Z}{\mathop{\hbox{\SSI Z\kern-.4em Z}}\nolimits}
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!

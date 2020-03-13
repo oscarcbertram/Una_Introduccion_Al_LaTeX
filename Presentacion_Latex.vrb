@@ -1,0 +1,18 @@
+\frametitle{Nuestro ejemplo: Report}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\subsection{Enmarcar la figura con el texto}
+Si queremos enmarcar la figura con un texto, solo tenemos que añadir el paquete \texttt{wrapfig} en el preámbulo y emplear el entorno correspondiente. Por ejemplo:
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+\vspace{-10pt}
+\begin{center}
+\includegraphics[width=2.5cm, keepaspectratio]{pajaro}
+\caption{El pájaro rodeado de texto y alineado a la derecha}
+\label{fig: enmarcado}
+\vspace{-20pt}
+\end{center}
+\end{wrapfigure}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in posuere neque, eget interdum mi. Maecenas magna enim, placerat nec sem quis, lobortis viverra est. Nulla vel blandit diam. Quisque commodo neque vel felis ornare, nec tincidunt eros bibendum. Duis pulvinar risus non porttitor dictum. Morbi ac nibh non diam feugiat cursus. Donec pulvinar, enim vitae ultrices pharetra, diam purus condimentum diam, sed iaculis nulla nunc nec nibh. In tellus tellus, vehicula sed molestie in, porttitor et est. Nulla facilisi. Aliquam vel sem eu felis sollicitudin molestie nec nec urna. Vivamus dictum, turpis mollis suscipit iaculis, sem odio mattis nisl, aliquet varius dui sem in eros. Maecenas elementum quis tortor vitae dictum. Aliquam fringilla congue purus eu consectetur. In viverra mi leo, sed placerat elit tempor vitae. Maecenas non elementum augue. Duis eu vehicula mi. Nunc eget scelerisque metus. Donec pretium congue mauris a pellentesque.
+\end{lstlisting}

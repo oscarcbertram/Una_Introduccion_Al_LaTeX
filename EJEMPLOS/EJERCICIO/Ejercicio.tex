@@ -1,0 +1,572 @@
+%----------------------------------------------------------------------------------------------------------------------------------------------------
+%						PAQUETES Y CONFIGURACIÓN DEL DOCUMENTO (PREÁMBULO)
+%----------------------------------------------------------------------------------------------------------------------------------------------------
+\documentclass[11pt, twoside, a4paper]{report}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+\newcommand{\micomando}[1]{Esta es la frase predefinida en mi comando, y mi nombre es #1}
+
+%-----Capítulo de Personalización
+\usepackage{xcolor}
+\definecolor{micolor1}{RGB}{100, 150, 15}
+\definecolor{micolor2}{RGB}{100, 50, 255}
+
+\pagestyle{headings} % estilo
+\textwidth 15cm
+\textheight 24cm
+\hoffset -0.2cm
+\voffset -1cm
+\oddsidemargin 1cm
+\evensidemargin 1cm
+%-----
+%----------------------------------------------------------------------------------------------------------------------------------------------------
+%											EL CUERPO
+%----------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+%-----------------------------Antes de nada...---------------------------------
+\title{Este es el título de nuestra memoria, la portada}
+\author{Oscar Cabrero Bertram}
+\date{\today}  
+\maketitle
+%Índice
+\tableofcontents
+\listoffigures
+\listoftables
+\begin{abstract}
+Este es mi primer resúmen. Me parece raro que solo tenga que preocuparme por lo que quiero decir, y no por cómo tengo que presentarlo. En esta memoria expondremos la mayor parte de las cosas que hemos aprendido en este curso.
+\end{abstract}
+%-------------------------------Contenido--------------------------------------
+\chapter{Mi primer capítulo}
+Este es el párrafo de entrada a mi primer capítulo. A continuación se presenta la primera sección en \LaTeX{}.
+\section{Mi primera sección}
+En este primer ejercicio escribiremos en {\bf negrita}, en {\it cursiva o itálica} y en tipo {\sc small caps}. En cuanto a los entornos, diremos tres cosas:
+\begin{itemize}
+\item Esta es la primera cosa.
+\item Esta es la segunda cosa.
+\item Esta es la tercera cosa, y la más importante de todas.
+\end{itemize}
+Por otra parte, utilizaremos nuestro primer comando: \micomando{Oscar}.
+
+\begin{center}
+{\LARGE ¡Me encanta esto del \LaTeX{}!}
+\end{center}
+
+\subsection{Mi primera subsección}
+Esta es mi primera subsección, y tiene un párrafo:
+
+\paragraph{Primer párrafo} En este párrafo tengo que decir que estoy muy contento por todo lo que he aprendido en \cite{Cabrero}
+
+
+\newpage %Para  cambiar de página
+\section{Los entornos}
+
+\subsection{Las listas}
+
+En esta sección haremos tres tipos de listas, a saber:
+
+\begin{itemize}
+\item Una lista de viñetas, que es esta misma
+\item Una lista numerada
+\item Una lista descriptiva
+\end{itemize}
+
+Además, anidaremos las unas en las otras, y veremos como queda el resultado.
+
+Ahí va la lista enumerada:
+
+\begin{enumerate}
+\item Este es el primer elemento de mi enumeración
+\item Este es el segundo elemento de mi enumeración, que se divide en:
+\begin{itemize}
+\item Un punto de tipo viñeta
+\item Otro punto de tipo viñeta
+\end{itemize}
+\end{enumerate}
+
+Además, una descripción puede albergar otra descripción, pero es necesario poner explícitamente el cambio de línea para comenzar una sublista:
+
+\begin{description}
+\item [Primer punto:] El cambio de línea en una descripción es necesario para una nueva lista
+\item [Por ejemplo:] El siguiente punto sería un posible resultado
+\item [Enumeración:]\hspace{0pt}\par
+\begin{enumerate}
+\item Primer punto
+\item Segundo punto
+\end{enumerate}
+\end{description}
+
+\subsection{Las notas al pie}
+
+Este es un ejemplo de nota al pie\footnote{Mi primera nota al pie.}. Es importante decir que las notas al pie no se anidan, es decir, no se puede llamar a una nota desde otra nota. Podemos, además, ponerle dos notas en la misma página, así \footnote{Nota de advertencia.}.
+
+Las notas al pie tienen un espacio reservado. Si ese espacio se sobre pasa, \LaTeX{} divide el contenido de la nota y pasa la parte sobrante a la página siguiente.
+
+\subsection{La justificación}
+
+Aquí pondremos en práctica la justificación del texto. Por ejemplo:
+
+\begin{flushright}
+Este texto está justificado a la derecha
+\end{flushright}
+
+\begin{flushleft}
+Este texto está justificado a la izquierda
+\end{flushleft}
+
+\begin{center}
+Este texto está muy bien centradito 
+\end{center}
+
+
+
+
+\subsection{Las tablas}
+
+Escribiremos en esta subsección lo que hemos aprendido respecto a las tablas en el capítulo {\sc entornos} de \cite{Cabrero}.
+
+\begin{center}
+\begin{tabular}{||l|c|r||}
+\hline
+{\bf Nombre} & {\bf Apellido} & {\bf Rol} \\
+\hline\hline
+Pepito & Pérez & Estudiante\\
+\hline
+Jorge & García & Estudiante\\
+\hline
+María & Piñales & Profesor\\
+\hline
+Olga & Roca & Administración\\
+\hline
+\end{tabular}
+\end{center}
+
+Por otra parte, si queremos hacer una casillla multicolumna, emplearemos el comando {\tt \textbackslash multicolumn\{{\em número columnas}\}\{{\em justificación}\}}\{{\em Texto}\}, y quedará el siguiente resultado (que se ha justificado a la derecha):
+
+
+\begin{flushright}
+\begin{tabular}{||l|c|r||}
+\hline
+\multicolumn{2}{||l|}{\bf Nombre Completo} & {\bf Rol} \\
+\hline\hline
+Pepito & Pérez & Estudiante\\
+\hline
+Jorge & García & Estudiante\\
+\hline
+María & Piñales & Profesor\\
+\hline
+Olga & Roca & Administración\\
+\hline
+\end{tabular}
+\end{flushright}
+
+
+\chapter{Mi nuevo capítulo}
+
+\section{Tipos de letra}\label{Etiqueta1}
+
+Aquí practicaremos escribiendo en \textbf{negrita}, {\sl cursiva} y en {\sc versalita}. Además, enfatizaremos texto, así:
+
+Este es un  texto enfatizado , y el énfasis se produce {\em justo aquí, pero puedo volver a enfatizar {\em aquí} para poder ver que vuelve a perfil recto.}
+
+Podemos subrayar texto facilmente, así: \underline{Texto subrayado}.
+
+
+También podemos juntarlo todo y \textsl{\bfseries escribir en negrita inclinada} o \textit{\bfseries itálica gordita}.
+
+Podemos hacerlo todo { G\large R\Large A\LARGE A\huge A\Huge NDE} o {\Huge M\huge U\LARGE Y \Large P\large e\normalsize q\small u\footnotesize e\scriptsize ñ\tiny o}
+\section{Colores}
+
+
+Respecto de los colores, podemos utilizar colores predefinidos, como {\color{red} el rojo}, {\color{green} el verde} o el {\color{blue} azul}.
+
+Además, se pueden definir colores para utilizarlos. Por ejemplo, {\color{micolor1} esto está en \texttt{micolor1}} y {\color{micolor2} esto está en \texttt{micolor2}}.
+
+\section{Los espacios forzados}
+
+Aquí intentaremos \hspace{4cm} mantener \newline todo\\ \vspace{1cm} \hspace{5cm} lo más espaciado\newpage posible
+\section{Referencias cruzadas}
+
+En esta sección haremos referencia a la sección \ref{Etiqueta1} que se encuentra en la página \pageref{Etiqueta1}.
+
+
+\chapter{Las matemáticas}
+
+En este capítulo escribiremos ecuaciones como $f(x)=e^x+1$, en modo ordinario, $\displaystyle{f_2(x)=\frac{x}{\int{x+1}}}$, en modo ordinario y resaltado, y $$f(x, y)=x^2+y^2\cdot e^x$$ que está en modo resaltado puro.
+
+\section{Superíndices, subíndices y puntos}
+
+
+Aquí jugaremos con los índices, anidándolos así:
+
+$$
+x^{x^{x^{x^{x^{x^{x}}}}}}
+$$
+
+o así:
+
+$$
+x_{x_{x_{x_{x_{x_{x}}}}}}
+$$
+
+o incluso así:
+
+$$
+x^{x_{x^{x_{x^{x_{x}}}}}}
+$$
+
+Podemos escribir muchas $\ldots$ cosas separadas por $\cdots$ puntos en distintas alturas o $\ddots$ en distintas $\vdots$ direcciones.
+ Esto puede servir para las matrices de dimensión grande o para las sumas muy largas:
+
+$$
+\begin{pmatrix}
+\|m_1-m_1\|&\|m_1-m_2\|&\cdots  &\|m_1-m_N\|\\
+\|m_2-m_1\|&\|m_2-m_2\|&\cdots  &\|m_2-m_N\|\\
+\|m_3-m_1\|&\|m_3-m_2\|&\cdots &\|m_3-m_N\|\\
+\vdots &\vdots &\ddots &\vdots \\
+\|m_N-m_1\|&\|m_N-m_1\|&\cdots &\|m_N-m_N\|\\
+\end{pmatrix}
+$$
+
+$$
+A=a_1+a_2+a_3+\cdots+a_n
+$$
+
+
+\section{Fracciones}
+
+Respecto de las fracciones denemos que decir que se pueden anidar, por supuesto:
+
+$$
+\frac{\frac{a}{b}}{\frac{a+c}{b+x^2}}
+$$
+
+Pero queda mejor con \texttt{\textbackslash displaystyle}:
+
+$$
+\displaystyle{\frac{\displaystyle{\frac{a}{b}}}{\displaystyle{\frac{a+c}{b+x^2}}}}
+$$
+
+Evidentemente, se puede unir todo lo anterior:
+
+$$
+F=
+\displaystyle{\frac{\displaystyle{\frac{x^{x^{x^{x^{x^{x^{x}}}}}}}{x_{x_{x_{x_{x_{x_{x}}}}}}}}}{\displaystyle{\frac{
+\begin{pmatrix}
+\|m_1-m_1\|&\|m_1-m_2\|&\cdots  &\|m_1-m_N\|\\
+\|m_2-m_1\|&\|m_2-m_2\|&\cdots  &\|m_2-m_N\|\\
+\|m_3-m_1\|&\|m_3-m_2\|&\cdots &\|m_3-m_N\|\\
+\vdots &\vdots &\ddots &\vdots \\
+\|m_N-m_1\|&\|m_N-m_1\|&\cdots &\|m_N-m_N\|\\
+\end{pmatrix}
+}{
+A=a_1+a_2+a_3+\cdots+a_n
+}}}}
+$$
+
+\section{Raíces}
+
+Las raíces se tragan cualquier cosa, es decir, podemos escribir dentro de ellas todo lo que queramos, solo hay que prestar atención a los limitadores de los entornos:
+
+$$
+G=
+\sqrt[a_1+a_2+a_3+\cdots+a_n]{
+\begin{pmatrix}
+\|m_1-m_1\|&\|m_1-m_2\|&\cdots  &\|m_1-m_N\|\\
+\|m_2-m_1\|&\|m_2-m_2\|&\cdots  &\|m_2-m_N\|\\
+\|m_3-m_1\|&\|m_3-m_2\|&\cdots &\|m_3-m_N\|\\
+\vdots &\vdots &\ddots &\vdots \\
+\|m_N-m_1\|&\|m_N-m_1\|&\cdots &\|m_N-m_N\|\\
+\end{pmatrix}
+}
+=
+\sqrt[A]{
+\displaystyle{\frac{x^{x^{x^{x^{x^{x^{x}}}}}}}{x_{x_{x_{x_{x_{x_{x}}}}}}}}
+}
+$$
+
+\section{Sumatorios e integrales}
+
+Aquí escribiremos integrales en el texto así: $\int_{-1}^{+\infty}x^3$, también así:  $\displaystyle{\int_{-1}^{+\infty}x^3}$ e incluso así: $$\int_{-1}^{+\infty}x^3$$
+
+Lo mismo haremos con la suma: $\sum_{-1}^{+\infty}x^3$, también así:  $\displaystyle{\sum_{-1}^{+\infty}x^3}$ e incluso así: $$\sum_{-1}^{+\infty}x^3$$
+
+
+\section{Matrices}
+
+Aquí simplemente aplicaremos algunos ejemplos para los limitadores. Nótese que en cada elemento puede entrar cualquier cosa.
+
+$$
+\begin{pmatrix}
+
+\begin{Vmatrix}
+\|m_1-m_1\|&\|m_1-m_2\|&\cdots  &\|m_1-m_N\|\\
+\|m_2-m_1\|&\|m_2-m_2\|&\cdots  &\|m_2-m_N\|\\
+\|m_3-m_1\|&\|m_3-m_2\|&\cdots &\|m_3-m_N\|\\
+\vdots &\vdots &\ddots &\vdots \\
+\|m_N-m_1\|&\|m_N-m_1\|&\cdots &\|m_N-m_N\|\\
+\end{Vmatrix}                                                                &\|m_1-m_2\|&\cdots  &\|m_1-m_N\|\\
+a_1+a_2+a_3+\cdots+a_n&\displaystyle{\sum_{-1}^{+\infty}x^3}&\cdots  &\displaystyle{\frac{x^{x^{x^{x^{x^{x^{x}}}}}}}{x_{x_{x_{x_{x_{x_{x}}}}}}}}\\
+\|m_3-m_1\|&\|m_3-m_2\|&\cdots &\|m_3-m_N\|\\
+\vdots &\vdots &\ddots &\vdots \\
+\displaystyle{\int_{-1}^{+\infty}x^3}&\|m_N-m_1\|&\cdots &\displaystyle{\sum_{-1}^{+\infty}x^3}\\
+\end{pmatrix}
+$$
+
+$$
+\begin{vmatrix}
+
+\begin{matrix}
+\|m_1-m_1\|&\|m_1-m_2\|&\cdots  &\|m_1-m_N\|\\
+\|m_2-m_1\|&\|m_2-m_2\|&\cdots  &\|m_2-m_N\|\\
+\|m_3-m_1\|&\|m_3-m_2\|&\cdots &\|m_3-m_N\|\\
+\vdots &\vdots &\ddots &\vdots \\
+\|m_N-m_1\|&\|m_N-m_1\|&\cdots &\|m_N-m_N\|\\
+\end{matrix}                                                                &\|m_1-m_2\|&\cdots  &\|m_1-m_N\|\\
+a_1+a_2+a_3+\cdots+a_n&\displaystyle{\sum_{-1}^{+\infty}x^3}&\cdots  &\displaystyle{\frac{x^{x^{x^{x^{x^{x^{x}}}}}}}{x_{x_{x_{x_{x_{x_{x}}}}}}}}\\
+\|m_3-m_1\|&\|m_3-m_2\|&\cdots &\|m_3-m_N\|\\
+\vdots &\vdots &\ddots &\vdots \\
+\displaystyle{\int_{-1}^{+\infty}x^3}&\|m_N-m_1\|&\cdots &\displaystyle{\sum_{-1}^{+\infty}x^3}\\
+\end{vmatrix}
+$$
+
+
+$$
+\begin{Bmatrix}
+
+\begin{bmatrix}
+\|m_1-m_1\|&\|m_1-m_2\|&\cdots  &\|m_1-m_N\|\\
+\|m_2-m_1\|&\|m_2-m_2\|&\cdots  &\|m_2-m_N\|\\
+\|m_3-m_1\|&\|m_3-m_2\|&\cdots &\|m_3-m_N\|\\
+\vdots &\vdots &\ddots &\vdots \\
+\|m_N-m_1\|&\|m_N-m_1\|&\cdots &\|m_N-m_N\|\\
+\end{bmatrix}                                                                &\|m_1-m_2\|&\cdots  &\|m_1-m_N\|\\
+a_1+a_2+a_3+\cdots+a_n&\displaystyle{\sum_{-1}^{+\infty}x^3}&\cdots  &\displaystyle{\frac{x^{x^{x^{x^{x^{x^{x}}}}}}}{x_{x_{x_{x_{x_{x_{x}}}}}}}}\\
+\|m_3-m_1\|&\|m_3-m_2\|&\cdots &\|m_3-m_N\|\\
+\vdots &\vdots &\ddots &\vdots \\
+\displaystyle{\int_{-1}^{+\infty}x^3}&\|m_N-m_1\|&\cdots &\displaystyle{\sum_{-1}^{+\infty}x^3}\\
+\end{Bmatrix}
+$$
+
+
+
+
+
+\section{Funciones definidas a tramos}
+
+Realizaremos el ejemplo de las diapositivas en primer lugar, y a continuación aplicaremos el anidammiento con algunas de las cosas que hemos escrito hasta ahora:
+
+$$f(x)=\left \{     \begin{array}{ll}
+\cos(\frac{1}{x})	&	\mbox{si $x \neq 0$} \\
+0				&	\mbox{si $x=0$}
+\end{array}	\right.
+$$
+
+Si ponemos una matriz y centramos la definición del tramo, por ejemplo:
+
+$$f(x)=\left \{     \begin{array}{cl}
+\cos(\frac{1}{x})	&	\mbox{si $x \neq 0$} \\
+\begin{pmatrix}
+\|m_1-m_1\|&\|m_1-m_2\|&\cdots  &\|m_1-m_N\|\\
+\|m_2-m_1\|&\|m_2-m_2\|&\cdots  &\|m_2-m_N\|\\
+\|m_3-m_1\|&\|m_3-m_2\|&\cdots &\|m_3-m_N\|\\
+\vdots &\vdots &\ddots &\vdots \\
+\|m_N-m_1\|&\|m_N-m_1\|&\cdots &\|m_N-m_N\|\\
+\end{pmatrix}				&	\mbox{si $x=0$}
+\end{array}	\right.
+$$
+
+También podemos hacer lo siguiente:
+
+$$f(x)=\left \{     \begin{array}{ll}
+\cos(\frac{1}{x})	&	\mbox{si $x \leq 0$} \\
+0				&	\mbox{si $x\in (0, 5]$}\\
+\displaystyle{\sum_{-1}^{+\infty}x^3}	&	\mbox{si $x\in (5, 1500]$} \\
+0	&	\mbox{si $x\in (1500, 5000]$} \\
+\displaystyle{\int_{-1}^{+\infty}x^3}	&	\mbox{si $x\in (6000, +\infty]$} 
+\end{array}	\right.
+$$
+
+
+\section{Ecuaciones}
+
+Finalmente podemos poner etiquetas a las ecuaciones anteriores simplemente cambiando la definición del entorno, y referenciarlas mediante  \texttt{\textbackslash label} y \texttt{\textbackslash ref}. Por ejemplo:
+
+\begin{equation}\label{eq: ecuacion1}
+f(x)=\left \{     \begin{array}{ll}
+\cos(\frac{1}{x})	&	\mbox{si $x \neq 0$} \\
+0				&	\mbox{si $x=0$}
+\end{array}	\right.
+\end{equation}
+
+\begin{equation}\label{eq: ecuacion2}
+f(x)=\sum_{-1}^{+\infty}x^3
+\end{equation}
+
+\begin{equation}\label{eq: ecuacion3}
+F=\begin{pmatrix}
+\|m_1-m_1\|&\|m_1-m_2\|&\cdots  &\|m_1-m_N\|\\
+\|m_2-m_1\|&\|m_2-m_2\|&\cdots  &\|m_2-m_N\|\\
+\|m_3-m_1\|&\|m_3-m_2\|&\cdots &\|m_3-m_N\|\\
+\vdots &\vdots &\ddots &\vdots \\
+\|m_N-m_1\|&\|m_N-m_1\|&\cdots &\|m_N-m_N\|\\
+\end{pmatrix}
+\end{equation}
+
+\begin{equation}\label{eq: ecuacion4}
+f(x)=\left \{     \begin{array}{ll}
+\sin\left(\displaystyle{\frac{1}{x}}\right)	&	\mbox{si $x \neq 0$} \\
+0				&	\mbox{si $x=0$}
+\end{array}	\right.
+\end{equation}
+
+Y a continuación referenciarlas: La ecuación \ref{eq: ecuacion2} tiene una suma, la ecuación \ref{eq: ecuacion3} tiene una matriz, la ecuación \ref{eq: ecuacion1} tiene un coseno y la ecuación \ref{eq: ecuacion4} tiene un seno.
+
+
+
+\chapter{Los objetos flotantes}
+
+Aquí aplicaremos los dos entornos más usados relacionados con los objetos flotantes: las figuras y las tablas.
+
+
+\section{Las tablas o cuadros}
+
+Las tablas pueden ser un entorno simplemente que se incluye en el texto:
+\begin{center}
+\begin{tabular}{||c|c|c||}
+\hline
+{\bf Nombre} & {\bf Apellido} & {\bf Puntuación} \\
+\hline \hline
+Marta & Cascón & 3.5 \\
+Juan & Gonzalez & 6.5 \\
+Pedro & Delgado & 9.3 \\
+Carlos & Perales & 8 \\
+\hline
+\end{tabular}
+\end{center}
+
+O se puede tratar de un entorno que se pueda referenciar como tabla, aparecer ordenado en un índice de tablas, poder ser editado en cuanto a posición y apariencia, etc.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{||c|c|c||}
+\hline
+{\bf Nombre} & {\bf Apellido} & {\bf Puntuación} \\
+\hline \hline
+Marta & Cascón & 3.5 \\
+Juan & Gonzalez & 6.5 \\
+Pedro & Delgado & 9.3 \\
+Carlos & Perales & 8 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Notas de clase}
+\label{tab: NotasClase}
+\end{table}
+
+
+El título del cuadro se puede poner encima del cuadro:
+
+\begin{table}[h]
+\caption{Notas de clase}
+\begin{center}
+\begin{tabular}{||c|c|c||}
+\hline
+{\bf Nombre} & {\bf Apellido} & {\bf Puntuación} \\
+\hline \hline
+Marta & Cascón & 3.5 \\
+Juan & Gonzalez & 6.5 \\
+Pedro & Delgado & 9.3 \\
+Carlos & Perales & 8 \\
+\hline
+\end{tabular}
+\end{center}
+\label{tab: NotasClase}
+\end{table}
+
+
+Como objeto flotante, el cuadro se puede forzar, por ejemplo, para que se ubique en la base de la página (véase cuadro \ref{tab: cuadrobase})
+
+\begin{table}[b]
+\caption{Notas de clase}
+\begin{center}
+\begin{tabular}{||c|c|c||}
+\hline
+{\bf Nombre} & {\bf Apellido} & {\bf Puntuación} \\
+\hline \hline
+Marta & Cascón & 3.5 \\
+Juan & Gonzalez & 6.5 \\
+Pedro & Delgado & 9.3 \\
+Carlos & Perales & 8 \\
+\hline
+\end{tabular}
+\end{center}
+\label{tab: cuadrobase}
+\end{table}
+
+
+\section{Las figuras}
+
+En cuanto a las figuras, no nos olvidemos de incluir en el preámbulo el paquete correspondiente. Podemos incluir una figura definiendo su anchura (figura \ref{fig: ancho}), su altura (figura \ref{fig: alto}) o escalándola (figura \ref{fig: escalado}, en el tope de la página \pageref{fig: escalado}).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=2.5cm]{pajaro}
+\caption{Pájaro dimensionado por anchura}
+\label{fig: ancho}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[height=2.5cm]{pajaro}
+\caption{Pájaro dimensionado por altura}
+\label{fig: alto}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.3]{pajaro}
+\caption{Pájaro dimensionado por escalado}
+\label{fig: escalado}
+\end{figure}
+
+Podemos también aplicar la imagen respecto de unas dimensiones especificadas (figura \ref{fig: aplicacion}, situada en la base de la página \pageref{fig: aplicacion}).
+
+\begin{figure}[b]
+\centering
+\includegraphics[width=13cm, height=1.5cm, clip=true]{pajaro}
+\caption{Pájaro dimensionado estirado y ajustado a unas dimensiones}
+\label{fig: aplicacion}
+\end{figure}
+\subsection{Enmarcar la figura con el texto}
+
+Si queremos enmarcar la figura con un texto, solo tenemos que añadir el paquete \texttt{wrapfig} en el preámbulo y emplear el entorno correspondiente. Por ejemplo:
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+\vspace{-10pt}
+\begin{center}
+\includegraphics[width=2.5cm, keepaspectratio]{pajaro}
+\caption{El pájaro rodeado de texto y alineado a la derecha}
+\label{fig: enmarcado}
+\vspace{-20pt}
+\end{center}
+\end{wrapfigure}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in posuere neque, eget interdum mi. Maecenas magna enim, placerat nec sem quis, lobortis viverra est. Nulla vel blandit diam. Quisque commodo neque vel felis ornare, nec tincidunt eros bibendum. Duis pulvinar risus non porttitor dictum. Morbi ac nibh non diam feugiat cursus. Donec pulvinar, enim vitae ultrices pharetra, diam purus condimentum diam, sed iaculis nulla nunc nec nibh. In tellus tellus, vehicula sed molestie in, porttitor et est. Nulla facilisi. Aliquam vel sem eu felis sollicitudin molestie nec nec urna. Vivamus dictum, turpis mollis suscipit iaculis, sem odio mattis nisl, aliquet varius dui sem in eros. Maecenas elementum quis tortor vitae dictum. Aliquam fringilla congue purus eu consectetur. In viverra mi leo, sed placerat elit tempor vitae. Maecenas non elementum augue. Duis eu vehicula mi. Nunc eget scelerisque metus. Donec pretium congue mauris a pellentesque.
+
+\appendix
+
+\chapter{Información adicional}
+Aquí iremos poniendo información que complemente al documento general.
+
+
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Bibliografía}
+\bibitem{Cabrero}{\bf Cabrero Bertram, O} {\it (2013) Diapositivas de clase}
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,56 @@
+\documentclass[10pt, aspectratio=169, unknownkeysallowed]{beamer} 
+%--------------------------------------TEMA DE LA PRESENTACIÓN---------------------------------------%
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  \setbeamercovered{invisible}%dynamic
+  \setbeamertemplate{blocks}[rounded][shadow=true]
+  \setbeamertemplate{navigation symbols}{}%eliminar botones de navegacion
+  \hypersetup{pdfpagemode=FullScreen} %Comentar para que no se abra automaticamente pantalla completa
+}%------------------------------------------PAQUETES-------------------------------------------------------%
+\usepackage{mispaquetes}
+%----------------------------------------DEFINICIONES----------------------------------------------------%
+\usepackage{misdefiniciones}
+\usepackage{mititulo}
+%-----------------COLORES------------------%
+\usepackage{miscolores}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------------------------------------------DOCUMENTO----------------------------------------------------------%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\includeonly{Secciones/Seccion9_Conclusion}
+\begin{document}
+%--------------Título----------------%
+\begin{frame}
+  \titlepage
+\end{frame}
+%--------------Índice----------------%\
+\begin{frame}{Índice general}
+\begin{multicols}{2}
+  \setcounter{tocdepth}{1}  
+  \tableofcontents
+\end{multicols}
+\end{frame}
+
+%-----------------------------------------------SECCIONES----------------------------------------------------------%
+
+\include{Secciones/Seccion1_Intro}
+\include{Secciones/Seccion2_Empiezo}
+\include{Secciones/Seccion3_ElDoc}
+\include{Secciones/Seccion4_PartesDoc}
+\include{Secciones/Seccion5_Entornos}
+\include{Secciones/Seccion6_Personalizacion}
+\include{Secciones/Seccion7_Matem}
+\include{Secciones/Seccion8_Graficos}
+\include{Secciones/Seccion9_Conclusion}
+\include{Secciones/Seccion_Licencia}
+
+\begin{frame}{Bibliografía}
+\nocite{*}
+\bibliographystyle{unsrt}
+\bibliography{Bibliografia/Bibliografia}
+\end{frame}
+
+\end{document}

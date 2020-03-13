@@ -1,0 +1,480 @@
+\section{Personalización}
+
+%----------------------------------------%----------------------------------------%----------------------------------------
+\subsection{Tipos de letra}
+
+\begin{frame}{Introducción}
+\begin{itemize}
+\item <1-> Los tipos que por defecto emplea \LaTeX{} los creó Knuth para \TeX{}
+\item <2-> Los denominó {\bf Computer Modern Fonts}
+\item <3-> No obstante, se pueden emplear otros tipos
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Según la familia}
+\begin{itemize}
+\item <1-> Básicamente, \LaTeX{} tiene tres familias de letras:
+\begin{itemize}
+\item <2-> \alert<2>{roman (normal), \textbf{por defecto}}
+\item <3-> \alert<3>{sanserif (sin adornos)}
+\item <4-> \alert<4>{typewriter (máquina de escribir)}
+\end{itemize}
+\end{itemize}
+
+\only<5->{
+\begin{sintax}{Tipos de familias}
+\texttt{\backS textrm\{}{\em Texto}\texttt{\}} o bien \texttt{\{\backS rmfamily }{\em Texto}\texttt{\}} o bien \texttt{\{\backS rm }{\em Texto}\texttt{\}}\\
+\texttt{\backS textsf\{}{\em Texto}\texttt{\}} o bien \texttt{\{\backS sffamily }{\em Texto}\texttt{\}} o bien \texttt{\{\backS sf }{\em Texto}\texttt{\}}\\ 
+\texttt{\backS texttt\{}{\em Texto}\texttt{\}} o bien \texttt{\{\backS ttfamily }{\em Texto}\texttt{\}} o bien \texttt{\{\backS tt }{\em Texto}\texttt{\}}\\
+\end{sintax}
+}
+\pause\pause\pause\pause\pause
+\begin{minipage}{0.49\textwidth}
+\begin{ejem}{Tipos de familias}
+\vspace{-0.5cm}
+\begin{lstlisting}
+Este texto está escrito sin modificar la familia por defecto: roman. \\
+{\sffamily Este texto está escrito en la familia sin adornos.} \\
+\texttt{Este texto está escrito en formato máquina de escribir.}
+\end{lstlisting}
+\end{ejem}
+\end{minipage}%
+\hfill%
+\pause
+\begin{minipage}{0.49\textwidth}
+Este texto está escrito sin modificar la familia por defecto: roman. \\
+{\sffamily Este texto está escrito en la familia sin adornos.} \\
+\texttt{Este texto está escrito en formato máquina de escribir.}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]{Según el perfil}
+\begin{itemize}
+\item <1-> Cada una de las familias tiene cuatro perfiles diferentes: \only<2->{\alert<2>{recto (normal), \textbf{por defecto},}} \only<3->{\alert<3>{itálico},} \only<4->{\alert<4>{inclinado},} \only<5->{\alert<5>{versalita}}
+\end{itemize}
+
+\only<6->{
+\begin{sintax}{Tipos de perfiles}
+\texttt{\backS textup\{}{\em Texto}\texttt{\}} o bien \texttt{\{\backS upshape }{\em Texto}\texttt{\}} o bien \texttt{\{\backS up }{\em Texto}\texttt{\}}\\
+\texttt{\backS textit\{}{\em Texto}\texttt{\}} o bien \texttt{\{\backS itshape }{\em Texto}\texttt{\}} o bien \texttt{\{\backS it }{\em Texto}\texttt{\}}\\
+\texttt{\backS textsl\{}{\em Texto}\texttt{\}} o bien \texttt{\{\backS slshape }{\em Texto}\texttt{\}} o bien \texttt{\{\backS sl }{\em Texto}\texttt{\}}\\
+\texttt{\backS textsc\{}{\em Texto}\texttt{\}} o bien \texttt{\{\backS scshape }{\em Texto}\texttt{\}} o bien \texttt{\{\backS sc }{\em Texto}\texttt{\}}
+\end{sintax}
+}
+\pause\pause\pause\pause\pause\pause
+\begin{minipage}{0.49\textwidth}
+\begin{ejem}{Tipos de perfiles}
+\vspace{-0.5cm}
+\begin{lstlisting}
+Texto en perfil recto \\
+{\itshape Texto en perfil itálico} \\
+{\slshape Texto en perfil inclinado} \\
+{\sc Texto en perfil versalita}
+\end{lstlisting}
+\end{ejem}
+\end{minipage}%
+\hfill
+\pause
+\begin{minipage}{0.4\textwidth}
+Texto en perfil recto \\
+{\itshape Texto en perfil itálico} \\
+{\slshape Texto en perfil inclinado} \\
+{\scshape Texto en perfil versalita}
+\end{minipage}
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}[fragile]{Según el grosor}
+
+Además, existen dos grosores: \only<2->{\alert<2>{medio (normal), \textbf{por defecto}}} \only<3->{ o \alert<3>{grueso o negrita}}
+
+\only<4->{
+\begin{sintax}{Tipos de grosores}
+\texttt{\backS textmd\{}{\em Texto}\texttt{\}} o bien \texttt{\{\backS mdseries }{\em Texto}\texttt{\}} o bien \texttt{\{\backS md }{\em Texto}\texttt{\}}\\
+\texttt{\backS textbf\{}{\em Texto}\texttt{\}} o bien \texttt{\{\backS bfseries }{\em Texto}\texttt{\}} o bien \texttt{\{\backS bf }{\em Texto}\texttt{\}}\\
+\end{sintax}
+}
+\pause\pause\pause
+
+\begin{minipage}{0.49\textwidth}
+
+\begin{ejem}{Tipos de grosores}
+\vspace{-0.5cm}
+
+\begin{lstlisting}
+Grosor normal \\
+{\bf Grosor de negrita}
+\end{lstlisting}
+\end{ejem}
+\end{minipage}%
+\hfill%
+\pause
+
+\begin{minipage}{0.49\textwidth}
+Grosor normal \\
+{\bf Grosor de negrita}
+\end{minipage}
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{frame}[fragile]{Tamaño y enfatizado}
+\begin{itemize}
+\item <1->Los \alert<1>{tamaños} son \alert<1>{\textbf{relativos}} al tamaño normal (en las opciones de \texttt{\backS documentclass})
+\item <2-> Los tamaños son: \texttt{\backS tiny}, \texttt{\backS scriptsize}, \texttt{\backS footnotesize}, \texttt{\backS small}, \texttt{\backS normalsize}, \texttt{\backS large}, \texttt{\backS Large}, \texttt{\backS LARGE}, \texttt{\backS huge}, \texttt{\backS Huge}
+\end{itemize}
+\pause\pause
+\begin{minipage}{0.49\textwidth}
+\begin{ejem}{Tamaños de letras}
+\vspace{-0.5cm}
+\begin{lstlisting}
+{\tiny tiny}, {\scriptsize scriptsize}, {\footnotesize footnotesize}, {\small small}, {\normalsize normalsize}, {\large large}, {\Large Large}, {\LARGE LARGE}, {\huge huge}, {\Huge Huge}
+\end{lstlisting}
+\end{ejem}
+\end{minipage}%
+\hfill
+\pause
+\begin{minipage}{0.49\textwidth}
+{\tiny tiny}, {\scriptsize scriptsize}, {\footnotesize footnotesize}, {\small small}, {\normalsize normalsize}, {\large large}, {\Large Large}, {\LARGE LARGE}, {\huge huge}, {\Huge Huge}
+\end{minipage}
+
+\begin{itemize}
+\item <6->El enfatizado es simple: cambia de un perfil a recto o viceversa
+\item <7-> También se puede subrayar
+\end{itemize}
+\only<8->{
+\begin{minipage}{0.49\textwidth}
+\begin{sintax}{Enfatizado}
+\texttt{\backS emph\{}{\em Texto}\texttt{\}} o bien \texttt{\{\backS em }{\em Texto}\texttt{\}}
+\end{sintax}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.4\textwidth}
+\begin{sintax}{Subrayado}
+\texttt{\backS underline\{}{\em Texto}\texttt{\}}
+\end{sintax}
+\end{minipage}
+}
+\end{frame}
+%----------------------------------------%----------------------------------------%----------------------------------------
+\subsection{Colores}
+
+\begin{frame}[fragile]{El paquete {\tt xcolor}}
+\only<1->{
+\begin{minipage}{0.53\textwidth}
+\begin{itemize}
+\item <1->El color es uno de los efectos más llamativos
+\item <2-> Emplearemos el paquete \texttt{xcolor}
+\item <4-> Permite definir colores (preámbulo)
+\end{itemize}
+\end{minipage}}%
+\only<3->{
+\hfill
+\begin{minipage}{0.44\textwidth}
+\begin{paquete}{color}
+\texttt{\backS usepackage[opciones]\{xcolor\}}
+\end{paquete}
+\end{minipage}
+}
+
+
+\only<5->{
+\begin{sintax}{Definición de color}
+\texttt{\backS definecolor\{}{\em mi color}\texttt{\}\{RGB\}\{}{\em rojoRGB, verdeRGB, azulRGB}\texttt{\}}
+\end{sintax}
+}
+\only<6->{Y para usar los colores:}
+\only<7->{
+\begin{sintax}{{\tt \backS color}}
+\texttt{\{\backS color\{}{\em nombre del color}\texttt{\} }{\em Texto}\texttt{\}} o bien \texttt{\backS textcolor\{}{\em nombre del color}\texttt{\}}\texttt{\{}{\em Texto}\texttt{\}}
+\end{sintax}
+}
+\pause\pause\pause\pause\pause\pause\pause
+\begin{minipage}{0.49\textwidth}
+\vspace{-0.2cm}
+\begin{ejem}{\texttt{\backS color}}
+\vspace{-0.5cm}
+\begin{lstlisting}
+%Preámbulo
+\definecolor{miazul}{RGB}{50, 100, 100}
+%Cuerpo
+{\color{miazul} Esto es mi azul} y \textcolor{red}{esto rojo}
+\end{lstlisting}
+\end{ejem}
+\end{minipage}%
+\hfill
+\pause
+\begin{minipage}{0.35\textwidth}
+{\color{miazul} Esto es mi azul} y \textcolor{red}{esto rojo}
+\end{minipage}
+
+\end{frame}
+
+
+%----------------------------------------%----------------------------------------%----------------------------------------
+\subsection{Paginación de un documento}
+
+\begin{frame}{Estilos de página}
+\begin{itemize}
+\item <1->Los estilos de página determinan el contenido del encabezamiento y del pie de página
+\item <2-> Existen varios estilos de página, pero los más importantes son:
+\only<3->{
+\begin{description}
+\item [\texttt{\color{black}plain}:] Cabercera vacía y pie con el número de página centrado 
+\item [\texttt{\color{black}empty}:] Cabecera y pie vacíos
+\item [\texttt{\color{black}headings}:] Cabecera con el número de página y un texto y el pie está vacío
+\end{description}
+}
+\end{itemize}
+
+\only<4->{Para elegir el estilo se emplean las siguientes declaraciones:}
+\only<5->{
+\begin{sintax}{Estilo de página}
+\texttt{\backS pagestyle\{}{\em estilo}\texttt{\}} (hasta que aparezca otro comando)
+
+ o bien
+
+\texttt{\backS thispagestyle\{}{\em estilo}\texttt{\}} (para una sola página)
+\end{sintax}
+}
+
+\only<6->{
+\begin{itemize}
+\item <6->\texttt{\backS pagestyle} lo emplearemos en el preámbulo para dar estilo a todo el documento
+\item <7-> \texttt{\backS thispagestyle} tras \texttt{\backS maketitle} evita la numeración de la portada.
+\end{itemize}
+}
+
+\end{frame}
+
+\begin{frame}[fragile]{Parámetros más importantes de una página}
+\only<1-6>{
+\begin{itemize}
+\item <1-6>El layout de una página se puede modificar al gusto (i.e.: para aprovechar más el papel)
+\item <2-6> La {\only<3>{\color{blue}}mancha}\only<3>{ ¿\neutro?} del texto se puede modificar \only<3-4>{en:}
+\only<4>{
+\begin{itemize}
+\item Tamaño (altura y anchura)
+\item Posición (márgenes horizontal y vertical)
+\end{itemize}}
+\item <5-6>Los parámetros que modificaremos son:
+\end{itemize}
+}
+\only<6->{
+\begin{sintax}{Parámetros}
+\texttt{\backS textwidth} {\em valor} \dotfill(anchura de la mancha)\\
+\texttt{\backS textheight} {\em valor} \dotfill(altura de la mancha)\\
+\texttt{\backS hoffset} {\em valor}\dotfill (márgen de salida horizontal)\\
+\texttt{\backS voffset} {\em valor} \dotfill(márgen de salida vertical)\\
+\texttt{\backS evensidemargin}  {\em valor}\dotfill(distancia de \texttt{\backS hoffset} a la mancha en pares)\\
+\texttt{\backS oddsidemargin} {\em valor}\dotfill (distancia de \texttt{\backS hoffset} a la mancha en impares)\\
+\end{sintax}
+}
+\pause\pause\pause\pause\pause\pause
+\begin{center}
+\begin{minipage}{0.4\textwidth}
+\vspace{-0.2cm}
+\begin{ejem}{Personalización de una página}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\textwidth 15cm
+\textheight 23cm
+\hoffset 0.5cm
+\voffset -1cm
+\oddsidemargin 1.5cm
+\evensidemargin 1.5cm
+\end{lstlisting}
+\end{ejem}
+\end{minipage}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{figure}[hbtp]
+\centering
+\vspace{-0.2cm}
+\includegraphics[height=\textheight]{Figuras/layout}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}[fragile]{Herramientas para hilar más fino}
+\begin{itemize}
+\item <1-> A veces queremos ajustar algún espacio o alguna altura, o forzar cambio de linea
+\item <2-> Incluso terminar una página y forzar la creación de otra
+\item <3-> Los comandos que más se emplean son:
+\end{itemize}
+\only<4->{
+\begin{sintax}{Herramientas de espaciado forzado}
+\texttt{\backS vspace\{}{\em valor}\texttt{\}}\\
+\texttt{\backS hspace\{}{\em valor}\texttt{\}}\\
+\texttt{\backS newpage}\\
+\texttt{\backS newline} o bien \texttt{\backS \backS} o bien \texttt{\backS par}
+\end{sintax}
+}
+\pause\pause\pause\pause
+\begin{minipage}{0.45\textwidth}
+\vspace{-0.2cm}
+\begin{ejem}{Espaciado forzado}
+\vspace{-0.5cm}
+\begin{lstlisting}
+Esto \hspace{0.5cm} y esto están\newline \vspace{0.4cm} separados por lo que he \\ querido
+\end{lstlisting}
+\end{ejem}
+\end{minipage}%
+\pause%
+\hfill%
+\begin{minipage}{0.45\textwidth}
+Esto \hspace{0.5cm} y esto están \newline \vspace{0.3cm} separados por lo que he \\ querido
+\end{minipage}%
+\end{frame}
+
+%----------------------------------------%----------------------------------------%----------------------------------------
+\subsection{Referencias cruzadas}
+\begin{frame}[fragile]{Referencias}
+\only<1->{
+\begin{minipage}{0.6\textwidth}
+\begin{itemize}
+\item <1->Las referencias {\color{miverdeO}complementan} la lectura de un documento, {\color{miverdeO}facilitándola}
+\item <2-> \LaTeX{} \alert<2>{actualizará} los marcadores de referencia \alert<2>{automáticamente} si se intercalan otras \bien
+\item <3-> Los comandos son \texttt{\backS ref} y \texttt{\backS pageref} complementados con \texttt{\backS label} en cualquier parte del documento
+\end{itemize}
+\end{minipage}}%
+\hfill%
+\only<4->{
+\begin{minipage}{0.39\textwidth}
+\begin{sintax}{Referencias}
+\texttt{\backS label\{}{\em etiqueta}\texttt{\}}\\
+\vdots
+
+\texttt{\backS ref\{}{\em etiqueta}\texttt{\}}\\
+y/o\\
+\texttt{\backS pageref\{}{\em etiqueta}\texttt{\}}
+\end{sintax}
+\end{minipage}
+}
+
+\pause\pause\pause\pause
+
+\begin{minipage}{0.5\textwidth}
+\vspace{-0.2cm}
+\begin{ejem}{Referencias}
+\vspace{-0.5cm}
+\begin{lstlisting}
+%etiquetado
+\section{Sección arbitraria}
+{\bf PALABRAS IMPORTANTES}\label{etiqueta}
+%. . .
+%llamada a la referencia
+En la sección \ref{etiqueta} de la página \pageref{etiqueta} se dicen unas palabras
+\end{lstlisting}
+\end{ejem}
+\end{minipage}%
+\pause%
+\hfill%
+\begin{minipage}{0.39\textwidth}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\alt<4->{\node[opacity=1]{\includegraphics[width=\textwidth]{FigurasEjemplos/referencia}};}
+{\node[opacity=0.01]{\includegraphics[width=\textwidth]{FigurasEjemplos/referencia}};}
+\end{tikzpicture}
+\end{figure}
+\end{minipage}
+\end{frame}
+%----------------------------------------%----------------------------------------%----------------------------------------
+
+
+
+\subsection{¡Manos a la obra!}
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report }
+\vspace{-0.1cm}
+\begin{center}
+\only<1>{
+Vamos a añadir un nuevo capítulo con todo lo aprendido en esta lección.}
+\only<2->{
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=1]{FigurasEjemplos/Ejercicio4}}
+\end{figure}
+\end{minipage}%
+\hspace{1cm}
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=2]{FigurasEjemplos/Ejercicio4}}
+\end{figure}
+\end{minipage}}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report}
+\vspace{-0.5cm}
+\begin{lstlisting}
+%-----Preámbulo
+\usepackage{xcolor}
+\definecolor{micolor1}{RGB}{100, 150, 15}
+\definecolor{micolor2}{RGB}{100, 50, 255}
+\pagestyle{headings}% estilo
+\textwidth 15cm
+\textheight 24cm
+\hoffset -0.2cm
+\voffset -1cm
+\oddsidemargin 1cm
+\evensidemargin 1cm
+%-----
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report}
+\vspace{-0.5cm}
+\begin{lstlisting}
+%-----Cuerpo
+%. . .
+\chapter{Mi nuevo capítulo}
+\section{Tipos de letra}\label{Etiqueta1}
+Aquí practicaremos escribiendo en \textbf{negrita}, {\sl cursiva} y en {\sc versalita}. Además, enfatizaremos texto, así:
+
+Este es un  texto enfatizado , y el énfasis se produce {\em justo aquí, pero puedo volver a enfatizar {\em aquí} para poder ver que vuelve a perfil recto.}
+
+Podemos subrayar texto facilmente, así: \underline{Texto subrayado}.
+
+También podemos juntarlo todo y \textsl{\bfseries escribir en negrita inclinada} o \textit{\bfseries itálica gordita}.
+
+Podemos hacerlo todo { G\large R\Large A\LARGE A\huge A\Huge NDE} o {\Huge M\huge U\LARGE Y \Large P\large e\normalsize q\small u\footnotesize e\scriptsize ñ\tiny o}
+\section{Colores}
+
+Respecto de los colores, podemos utilizar colores predefinidos, como {\color{red} el rojo}, {\color{green} el verde} o el {\color{blue} azul}.
+
+Además, se pueden definir colores para utilizarlos. Por ejemplo, {\color{micolor1} esto está en \texttt{micolor1}} y {\color{micolor2} esto está en \texttt{micolor2}}.
+
+\section{Los espacios forzados}
+Aquí intentaremos \hspace{4cm} mantener \newline todo\\ \vspace{1cm} \hspace{5cm} lo más espaciado\newpage posible
+\section{Referencias cruzadas}
+
+En esta sección haremos referencia a la sección \ref{Etiqueta1} que se encuentra en la página \pageref{Etiqueta1}.
+% . . .
+\end{lstlisting}
+
+\end{frame}
+
+
+

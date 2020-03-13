@@ -1,0 +1,23 @@
+\documentclass[11pt]{letter}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{marvosym}
+\begin{document}
+\begin{letter}{Dña. Mónica {\it Limonero Gutiérrez}. Subdirectora de Relaciones Internacionales\\
+{\sc Oficina Información Internacional}:\\
+Dirección y Adjuntía para Movilidad y Extensión Internacional \\
+EMPRESA. Calle Sinesio Gordito. \\
+280XX MADRID,  ESPAÑA}
+\begin{center}
+\large\bf Perico del Dedo Delgado \\
+Calle del Hambre, 5, piso 1, puerta A\\ Jaén, España \\ +34 600 00 00 XX\\
+pededo\MVAt delgado.com
+\end{center}
+\signature{Perico del Dedo Delgado}
+\opening{Estimada Sra. Limonero,}
+Lorem ipsum
+A la espera de una respuesta, quedo a su entera disposición para facilitarles cualquier información complementaria.
+\closing{Reciban un cordial saludo, }
+\encl{Documentos que puedan ser de su interés}
+\end{letter}
+\end{document}

@@ -1,0 +1,304 @@
+\beamer@endinputifotherversion {3.27pt}
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\sectionentry {1}{Introducci\'on}{3}{Introducci\'on}{0}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\slideentry {1}{0}{3}{3/3}{}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{4}{\IeC {\textquestiondown }Qu\'e es esto del \textlatin {\LaTeX }?}}\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\slideentry {1}{1}{1}{4/10}{\IeC {\textquestiondown }Qu\'e es esto del \textlatin {\LaTeX }?}{0}}
+\headcommand {\beamer@framepages {4}{10}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{11}{\IeC {\textquestiondown }Por qu\'e utilizarlo?}}\headcommand {\beamer@subsectionpages {4}{10}}
+\headcommand {\slideentry {1}{2}{1}{11/20}{\IeC {\textquestiondown }Por qu\'e utilizarlo?}{0}}
+\headcommand {\beamer@framepages {11}{20}}
+\headcommand {\slideentry {1}{2}{2}{21/24}{\IeC {\textquestiondown }Por qu\'e utilizarlo?}{0}}
+\headcommand {\beamer@framepages {21}{24}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{25}{\IeC {\textquestiondown }Merece la pena?}}\headcommand {\beamer@subsectionpages {11}{24}}
+\headcommand {\slideentry {1}{3}{1}{25/32}{\IeC {\textquestiondown }Merece la pena?}{0}}
+\headcommand {\beamer@framepages {25}{32}}
+\headcommand {\beamer@subsectionentry {0}{1}{4}{33}{\'Animo}}\headcommand {\beamer@subsectionpages {25}{32}}
+\headcommand {\sectionentry {2}{\IeC {\textquestiondown }C\'omo empiezo?}{33}{\IeC {\textquestiondown }C\'omo empiezo?}{0}}
+\headcommand {\beamer@sectionpages {3}{32}}
+\headcommand {\beamer@subsectionpages {33}{32}}
+\headcommand {\slideentry {2}{0}{1}{33/33}{}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{34}{Modo de funcionamiento}}\headcommand {\beamer@subsectionpages {33}{33}}
+\headcommand {\slideentry {2}{1}{1}{34/37}{Modo de funcionamiento}{0}}
+\headcommand {\beamer@framepages {34}{37}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{38}{Los requerimientos}}\headcommand {\beamer@subsectionpages {34}{37}}
+\headcommand {\slideentry {2}{2}{1}{38/45}{Los requerimientos}{0}}
+\headcommand {\beamer@framepages {38}{45}}
+\headcommand {\sectionentry {3}{El documento}{46}{El documento}{0}}
+\headcommand {\beamer@sectionpages {33}{45}}
+\headcommand {\beamer@subsectionpages {38}{45}}
+\headcommand {\slideentry {3}{0}{2}{46/46}{}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{47}{Un ejemplo}}\headcommand {\beamer@subsectionpages {46}{46}}
+\headcommand {\slideentry {3}{1}{1}{47/47}{Un ejemplo}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{48}{El fichero fuente}}\headcommand {\beamer@subsectionpages {47}{47}}
+\headcommand {\slideentry {3}{2}{1}{48/50}{El fichero fuente}{0}}
+\headcommand {\beamer@framepages {48}{50}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{51}{El pre\'ambulo}}\headcommand {\beamer@subsectionpages {48}{50}}
+\headcommand {\slideentry {3}{3}{1}{51/55}{El pre\'ambulo}{0}}
+\headcommand {\beamer@framepages {51}{55}}
+\headcommand {\slideentry {3}{3}{2}{56/60}{El pre\'ambulo}{0}}
+\headcommand {\beamer@framepages {56}{60}}
+\headcommand {\slideentry {3}{3}{3}{61/66}{El pre\'ambulo}{0}}
+\headcommand {\beamer@framepages {61}{66}}
+\headcommand {\slideentry {3}{3}{4}{67/75}{El pre\'ambulo}{0}}
+\headcommand {\beamer@framepages {67}{75}}
+\headcommand {\slideentry {3}{3}{5}{76/83}{El pre\'ambulo}{0}}
+\headcommand {\beamer@framepages {76}{83}}
+\headcommand {\slideentry {3}{3}{6}{84/88}{El pre\'ambulo}{0}}
+\headcommand {\beamer@framepages {84}{88}}
+\headcommand {\slideentry {3}{3}{7}{89/93}{El pre\'ambulo}{0}}
+\headcommand {\beamer@framepages {89}{93}}
+\headcommand {\slideentry {3}{3}{8}{94/99}{El pre\'ambulo}{0}}
+\headcommand {\beamer@framepages {94}{99}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{100}{El cuerpo}}\headcommand {\beamer@subsectionpages {51}{99}}
+\headcommand {\slideentry {3}{4}{1}{100/103}{El cuerpo}{0}}
+\headcommand {\beamer@framepages {100}{103}}
+\headcommand {\slideentry {3}{4}{2}{104/107}{El cuerpo}{0}}
+\headcommand {\beamer@framepages {104}{107}}
+\headcommand {\slideentry {3}{4}{3}{108/113}{El cuerpo}{0}}
+\headcommand {\beamer@framepages {108}{113}}
+\headcommand {\slideentry {3}{4}{4}{114/116}{El cuerpo}{0}}
+\headcommand {\beamer@framepages {114}{116}}
+\headcommand {\slideentry {3}{4}{5}{117/127}{El cuerpo}{0}}
+\headcommand {\beamer@framepages {117}{127}}
+\headcommand {\beamer@subsectionentry {0}{3}{5}{128}{Clases de documentos}}\headcommand {\beamer@subsectionpages {100}{127}}
+\headcommand {\slideentry {3}{5}{1}{128/133}{Clases de documentos}{0}}
+\headcommand {\beamer@framepages {128}{133}}
+\headcommand {\beamer@subsectionentry {0}{3}{6}{134}{\IeC {\textexclamdown }Manos a la obra!}}\headcommand {\beamer@subsectionpages {128}{133}}
+\headcommand {\slideentry {3}{6}{1}{134/135}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {134}{135}}
+\headcommand {\slideentry {3}{6}{2}{136/136}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {136}{136}}
+\headcommand {\sectionentry {4}{Partes del documento}{137}{Partes del documento}{0}}
+\headcommand {\beamer@sectionpages {46}{136}}
+\headcommand {\beamer@subsectionpages {134}{136}}
+\headcommand {\slideentry {4}{0}{3}{137/137}{}{0}}
+\headcommand {\beamer@framepages {137}{137}}
+\headcommand {\slideentry {4}{0}{4}{138/145}{}{0}}
+\headcommand {\beamer@framepages {138}{145}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{146}{Portada}}\headcommand {\beamer@subsectionpages {137}{145}}
+\headcommand {\slideentry {4}{1}{1}{146/152}{Portada}{0}}
+\headcommand {\beamer@framepages {146}{152}}
+\headcommand {\slideentry {4}{1}{2}{153/155}{Portada}{0}}
+\headcommand {\beamer@framepages {153}{155}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{156}{\'Indices}}\headcommand {\beamer@subsectionpages {146}{155}}
+\headcommand {\slideentry {4}{2}{1}{156/163}{\'Indices}{0}}
+\headcommand {\beamer@framepages {156}{163}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{164}{Resumen}}\headcommand {\beamer@subsectionpages {156}{163}}
+\headcommand {\slideentry {4}{3}{1}{164/166}{Resumen}{0}}
+\headcommand {\beamer@framepages {164}{166}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{167}{Cuerpo}}\headcommand {\beamer@subsectionpages {164}{166}}
+\headcommand {\slideentry {4}{4}{1}{167/175}{Cuerpo}{0}}
+\headcommand {\beamer@framepages {167}{175}}
+\headcommand {\slideentry {4}{4}{2}{176/176}{Cuerpo}{0}}
+\headcommand {\beamer@framepages {176}{176}}
+\headcommand {\slideentry {4}{4}{3}{177/177}{Cuerpo}{0}}
+\headcommand {\beamer@framepages {177}{177}}
+\headcommand {\slideentry {4}{4}{4}{178/178}{Cuerpo}{0}}
+\headcommand {\beamer@framepages {178}{178}}
+\headcommand {\slideentry {4}{4}{5}{179/181}{Cuerpo}{0}}
+\headcommand {\beamer@framepages {179}{181}}
+\headcommand {\beamer@subsectionentry {0}{4}{5}{182}{Anexos}}\headcommand {\beamer@subsectionpages {167}{181}}
+\headcommand {\slideentry {4}{5}{1}{182/186}{Anexos}{0}}
+\headcommand {\beamer@framepages {182}{186}}
+\headcommand {\beamer@subsectionentry {0}{4}{6}{187}{Bibliograf\IeC {\'\i }a}}\headcommand {\beamer@subsectionpages {182}{186}}
+\headcommand {\slideentry {4}{6}{1}{187/194}{Bibliograf\IeC {\'\i }a}{0}}
+\headcommand {\beamer@framepages {187}{194}}
+\headcommand {\slideentry {4}{6}{2}{195/196}{Bibliograf\IeC {\'\i }a}{0}}
+\headcommand {\beamer@framepages {195}{196}}
+\headcommand {\beamer@subsectionentry {0}{4}{7}{197}{\IeC {\textexclamdown }Manos a la obra!}}\headcommand {\beamer@subsectionpages {187}{196}}
+\headcommand {\slideentry {4}{7}{1}{197/199}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {197}{199}}
+\headcommand {\slideentry {4}{7}{2}{200/202}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {200}{202}}
+\headcommand {\slideentry {4}{7}{3}{203/203}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {203}{203}}
+\headcommand {\slideentry {4}{7}{4}{204/204}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {204}{204}}
+\headcommand {\sectionentry {5}{Entornos}{205}{Entornos}{0}}
+\headcommand {\beamer@sectionpages {137}{204}}
+\headcommand {\beamer@subsectionpages {197}{204}}
+\headcommand {\slideentry {5}{0}{5}{205/205}{}{0}}
+\headcommand {\beamer@framepages {205}{205}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{206}{Listas}}\headcommand {\beamer@subsectionpages {205}{205}}
+\headcommand {\slideentry {5}{1}{1}{206/210}{Listas}{0}}
+\headcommand {\beamer@framepages {206}{210}}
+\headcommand {\slideentry {5}{1}{2}{211/215}{Listas}{0}}
+\headcommand {\beamer@framepages {211}{215}}
+\headcommand {\slideentry {5}{1}{3}{216/220}{Listas}{0}}
+\headcommand {\beamer@framepages {216}{220}}
+\headcommand {\slideentry {5}{1}{4}{221/225}{Listas}{0}}
+\headcommand {\beamer@framepages {221}{225}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{226}{Notas}}\headcommand {\beamer@subsectionpages {206}{225}}
+\headcommand {\slideentry {5}{2}{1}{226/231}{Notas}{0}}
+\headcommand {\beamer@framepages {226}{231}}
+\headcommand {\beamer@subsectionentry {0}{5}{3}{232}{Alineaci\'on del texto}}\headcommand {\beamer@subsectionpages {226}{231}}
+\headcommand {\slideentry {5}{3}{1}{232/237}{Alineaci\'on del texto}{0}}
+\headcommand {\beamer@framepages {232}{237}}
+\headcommand {\beamer@subsectionentry {0}{5}{4}{238}{Tablas}}\headcommand {\beamer@subsectionpages {232}{237}}
+\headcommand {\slideentry {5}{4}{1}{238/243}{Tablas}{0}}
+\headcommand {\beamer@framepages {238}{243}}
+\headcommand {\slideentry {5}{4}{2}{244/247}{Tablas}{0}}
+\headcommand {\beamer@framepages {244}{247}}
+\headcommand {\beamer@subsectionentry {0}{5}{5}{248}{\IeC {\textexclamdown }Manos a la obra!}}\headcommand {\beamer@subsectionpages {238}{247}}
+\headcommand {\slideentry {5}{5}{1}{248/249}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {248}{249}}
+\headcommand {\slideentry {5}{5}{2}{250/250}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {250}{250}}
+\headcommand {\slideentry {5}{5}{3}{251/251}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {251}{251}}
+\headcommand {\slideentry {5}{5}{4}{252/252}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {252}{252}}
+\headcommand {\sectionentry {6}{Personalizaci\'on}{253}{Personalizaci\'on}{0}}
+\headcommand {\beamer@sectionpages {205}{252}}
+\headcommand {\beamer@subsectionpages {248}{252}}
+\headcommand {\slideentry {6}{0}{5}{253/253}{}{0}}
+\headcommand {\beamer@framepages {253}{253}}
+\headcommand {\beamer@subsectionentry {0}{6}{1}{254}{Tipos de letra}}\headcommand {\beamer@subsectionpages {253}{253}}
+\headcommand {\slideentry {6}{1}{1}{254/256}{Tipos de letra}{0}}
+\headcommand {\beamer@framepages {254}{256}}
+\headcommand {\slideentry {6}{1}{2}{257/263}{Tipos de letra}{0}}
+\headcommand {\beamer@framepages {257}{263}}
+\headcommand {\slideentry {6}{1}{3}{264/271}{Tipos de letra}{0}}
+\headcommand {\beamer@framepages {264}{271}}
+\headcommand {\slideentry {6}{1}{4}{272/276}{Tipos de letra}{0}}
+\headcommand {\beamer@framepages {272}{276}}
+\headcommand {\slideentry {6}{1}{5}{277/284}{Tipos de letra}{0}}
+\headcommand {\beamer@framepages {277}{284}}
+\headcommand {\beamer@subsectionentry {0}{6}{2}{285}{Colores}}\headcommand {\beamer@subsectionpages {254}{284}}
+\headcommand {\slideentry {6}{2}{1}{285/293}{Colores}{0}}
+\headcommand {\beamer@framepages {285}{293}}
+\headcommand {\beamer@subsectionentry {0}{6}{3}{294}{Paginaci\'on de un documento}}\headcommand {\beamer@subsectionpages {285}{293}}
+\headcommand {\slideentry {6}{3}{1}{294/300}{Paginaci\'on de un documento}{0}}
+\headcommand {\beamer@framepages {294}{300}}
+\headcommand {\slideentry {6}{3}{2}{301/307}{Paginaci\'on de un documento}{0}}
+\headcommand {\beamer@framepages {301}{307}}
+\headcommand {\slideentry {6}{3}{3}{308/308}{Paginaci\'on de un documento}{0}}
+\headcommand {\beamer@framepages {308}{308}}
+\headcommand {\slideentry {6}{3}{4}{309/314}{Paginaci\'on de un documento}{0}}
+\headcommand {\beamer@framepages {309}{314}}
+\headcommand {\beamer@subsectionentry {0}{6}{4}{315}{Referencias cruzadas}}\headcommand {\beamer@subsectionpages {294}{314}}
+\headcommand {\slideentry {6}{4}{1}{315/320}{Referencias cruzadas}{0}}
+\headcommand {\beamer@framepages {315}{320}}
+\headcommand {\beamer@subsectionentry {0}{6}{5}{321}{\IeC {\textexclamdown }Manos a la obra!}}\headcommand {\beamer@subsectionpages {315}{320}}
+\headcommand {\slideentry {6}{5}{1}{321/322}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {321}{322}}
+\headcommand {\slideentry {6}{5}{2}{323/323}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {323}{323}}
+\headcommand {\slideentry {6}{5}{3}{324/324}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {324}{324}}
+\headcommand {\sectionentry {7}{Las matem\'aticas}{325}{Las matem\'aticas}{0}}
+\headcommand {\beamer@sectionpages {253}{324}}
+\headcommand {\beamer@subsectionpages {321}{324}}
+\headcommand {\slideentry {7}{0}{4}{325/325}{}{0}}
+\headcommand {\beamer@framepages {325}{325}}
+\headcommand {\slideentry {7}{0}{5}{326/333}{}{0}}
+\headcommand {\beamer@framepages {326}{333}}
+\headcommand {\beamer@subsectionentry {0}{7}{1}{334}{Los s\IeC {\'\i }mbolos en matem\'aticas}}\headcommand {\beamer@subsectionpages {325}{333}}
+\headcommand {\slideentry {7}{1}{1}{334/344}{Los s\IeC {\'\i }mbolos en matem\'aticas}{0}}
+\headcommand {\beamer@framepages {334}{344}}
+\headcommand {\beamer@subsectionentry {0}{7}{2}{345}{Sub\IeC {\'\i }ndices, super\IeC {\'\i }ndices y puntos suspensivos}}\headcommand {\beamer@subsectionpages {334}{344}}
+\headcommand {\slideentry {7}{2}{1}{345/357}{Sub\IeC {\'\i }ndices, super\IeC {\'\i }ndices y puntos suspensivos}{0}}
+\headcommand {\beamer@framepages {345}{357}}
+\headcommand {\beamer@subsectionentry {0}{7}{3}{358}{Fracciones}}\headcommand {\beamer@subsectionpages {345}{357}}
+\headcommand {\slideentry {7}{3}{1}{358/362}{Fracciones}{0}}
+\headcommand {\beamer@framepages {358}{362}}
+\headcommand {\beamer@subsectionentry {0}{7}{4}{363}{Ra\IeC {\'\i }ces}}\headcommand {\beamer@subsectionpages {358}{362}}
+\headcommand {\slideentry {7}{4}{1}{363/366}{Ra\IeC {\'\i }ces}{0}}
+\headcommand {\beamer@framepages {363}{366}}
+\headcommand {\beamer@subsectionentry {0}{7}{5}{367}{Sumatorios e integrales}}\headcommand {\beamer@subsectionpages {363}{366}}
+\headcommand {\slideentry {7}{5}{1}{367/372}{Sumatorios e integrales}{0}}
+\headcommand {\beamer@framepages {367}{372}}
+\headcommand {\beamer@subsectionentry {0}{7}{6}{373}{Matrices}}\headcommand {\beamer@subsectionpages {367}{372}}
+\headcommand {\slideentry {7}{6}{1}{373/378}{Matrices}{0}}
+\headcommand {\beamer@framepages {373}{378}}
+\headcommand {\slideentry {7}{6}{2}{379/383}{Matrices}{0}}
+\headcommand {\beamer@framepages {379}{383}}
+\headcommand {\slideentry {7}{6}{3}{384/388}{Matrices}{0}}
+\headcommand {\beamer@framepages {384}{388}}
+\headcommand {\beamer@subsectionentry {0}{7}{7}{389}{Funciones definidas a tramos}}\headcommand {\beamer@subsectionpages {373}{388}}
+\headcommand {\slideentry {7}{7}{1}{389/395}{Funciones definidas a tramos}{0}}
+\headcommand {\beamer@framepages {389}{395}}
+\headcommand {\beamer@subsectionentry {0}{7}{8}{396}{Ecuaciones}}\headcommand {\beamer@subsectionpages {389}{395}}
+\headcommand {\slideentry {7}{8}{1}{396/400}{Ecuaciones}{0}}
+\headcommand {\beamer@framepages {396}{400}}
+\headcommand {\beamer@subsectionentry {0}{7}{9}{401}{\IeC {\textexclamdown }Manos a la obra!}}\headcommand {\beamer@subsectionpages {396}{400}}
+\headcommand {\slideentry {7}{9}{1}{401/402}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {401}{402}}
+\headcommand {\slideentry {7}{9}{2}{403/403}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {403}{403}}
+\headcommand {\slideentry {7}{9}{3}{404/404}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {404}{404}}
+\headcommand {\slideentry {7}{9}{4}{405/405}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {405}{405}}
+\headcommand {\slideentry {7}{9}{5}{406/406}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {406}{406}}
+\headcommand {\slideentry {7}{9}{6}{407/407}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {407}{407}}
+\headcommand {\slideentry {7}{9}{7}{408/408}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {408}{408}}
+\headcommand {\slideentry {7}{9}{8}{409/409}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {409}{409}}
+\headcommand {\sectionentry {8}{Los objetos flotantes}{410}{Los objetos flotantes}{0}}
+\headcommand {\beamer@sectionpages {325}{409}}
+\headcommand {\beamer@subsectionpages {401}{409}}
+\headcommand {\slideentry {8}{0}{9}{410/410}{}{0}}
+\headcommand {\beamer@framepages {410}{410}}
+\headcommand {\slideentry {8}{0}{10}{411/422}{}{0}}
+\headcommand {\beamer@framepages {411}{422}}
+\headcommand {\beamer@subsectionentry {0}{8}{1}{423}{Los cuadros}}\headcommand {\beamer@subsectionpages {410}{422}}
+\headcommand {\slideentry {8}{1}{1}{423/424}{Los cuadros}{0}}
+\headcommand {\beamer@framepages {423}{424}}
+\headcommand {\beamer@subsectionentry {0}{8}{2}{425}{Las figuras}}\headcommand {\beamer@subsectionpages {423}{424}}
+\headcommand {\slideentry {8}{2}{1}{425/433}{Las figuras}{0}}
+\headcommand {\beamer@framepages {425}{433}}
+\headcommand {\slideentry {8}{2}{2}{434/436}{Las figuras}{0}}
+\headcommand {\beamer@framepages {434}{436}}
+\headcommand {\slideentry {8}{2}{3}{437/441}{Las figuras}{0}}
+\headcommand {\beamer@framepages {437}{441}}
+\headcommand {\slideentry {8}{2}{4}{442/443}{Las figuras}{0}}
+\headcommand {\beamer@framepages {442}{443}}
+\headcommand {\beamer@subsectionentry {0}{8}{3}{444}{\IeC {\textexclamdown }Manos a la obra!}}\headcommand {\beamer@subsectionpages {425}{443}}
+\headcommand {\slideentry {8}{3}{1}{444/446}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {444}{446}}
+\headcommand {\slideentry {8}{3}{2}{447/449}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {447}{449}}
+\headcommand {\slideentry {8}{3}{3}{450/450}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {450}{450}}
+\headcommand {\slideentry {8}{3}{4}{451/451}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {451}{451}}
+\headcommand {\slideentry {8}{3}{5}{452/452}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {452}{452}}
+\headcommand {\slideentry {8}{3}{6}{453/453}{\IeC {\textexclamdown }Manos a la obra!}{0}}
+\headcommand {\beamer@framepages {453}{453}}
+\headcommand {\sectionentry {9}{Conclusi\'on}{454}{Conclusi\'on}{0}}
+\headcommand {\beamer@sectionpages {410}{453}}
+\headcommand {\beamer@subsectionpages {444}{453}}
+\headcommand {\slideentry {9}{0}{7}{454/454}{}{0}}
+\headcommand {\beamer@framepages {454}{454}}
+\headcommand {\beamer@subsectionentry {0}{9}{1}{455}{Queda claro}}\headcommand {\beamer@subsectionpages {454}{454}}
+\headcommand {\slideentry {9}{1}{1}{455/463}{Queda claro}{0}}
+\headcommand {\beamer@framepages {455}{463}}
+\headcommand {\beamer@subsectionentry {0}{9}{2}{464}{\IeC {\textquestiondown }Y ahora qu\'e?}}\headcommand {\beamer@subsectionpages {455}{463}}
+\headcommand {\slideentry {9}{2}{1}{464/469}{\IeC {\textquestiondown }Y ahora qu\'e?}{0}}
+\headcommand {\beamer@framepages {464}{469}}
+\headcommand {\slideentry {9}{2}{2}{470/470}{\IeC {\textquestiondown }Y ahora qu\'e?}{0}}
+\headcommand {\beamer@framepages {470}{470}}
+\headcommand {\slideentry {9}{2}{3}{471/471}{\IeC {\textquestiondown }Y ahora qu\'e?}{0}}
+\headcommand {\beamer@framepages {471}{471}}
+\headcommand {\slideentry {9}{2}{4}{472/472}{\IeC {\textquestiondown }Y ahora qu\'e?}{0}}
+\headcommand {\beamer@framepages {472}{472}}
+\headcommand {\beamer@partpages {1}{472}}
+\headcommand {\beamer@subsectionpages {464}{472}}
+\headcommand {\beamer@sectionpages {454}{472}}
+\headcommand {\beamer@documentpages {472}}
+\headcommand {\def \inserttotalframenumber {114}}

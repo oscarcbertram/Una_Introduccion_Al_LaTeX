@@ -1,0 +1,613 @@
+\section{Partes del documento}
+\begin{frame}{Las partes del documento}
+\only<1>{\centering Todo tiene su lugar: los artículos, memorias y libros tienen estructuras distintas, por lo que hay que discernir entre los elementos que componen cada una de ellos.}
+
+\only<2->{
+De forma general, para los artículos, {\em reports} y libros, los contenidos serán (\alert{orientativo}):
+\begin{center}
+\uncover<3->{\begin{minipage}{0.25\textwidth}
+\begin{acla}{Artículo}
+\begin{center}
+{\only<6->{\color{red}}Título\\
+Autor\\
+Resumen ({\em abstract})\\}
+{\only<7->{\color{green}}Cuerpo\\}
+{\only<8->{\color{blue}}Agradecimientos\\
+Referencias}
+\end{center}
+\end{acla}
+\end{minipage}%
+\hfill}
+\uncover<4->{\begin{minipage}{0.25\textwidth}
+\begin{acla}{Memoria}
+\begin{center}
+{\only<6->{\color{red}}Portada\\
+Dedicatoria\\
+Resumen ({\em abstract})\\
+Agradecimientos\\
+Índices\\
+Prólogo\\}
+{\only<7->{\color{green}}Capítulos\\}
+{\only<8->{\color{blue}}Apéndices\\
+Bibliografía\\
+Glosario}
+\end{center}
+\end{acla}
+\end{minipage}%
+\hfill}
+\uncover<5->{\begin{minipage}{0.25\textwidth}
+\begin{acla}{Libro}
+\begin{center}
+{\only<6->{\color{red}}Anteportada\\
+Portada\\
+Derechos\\
+Dedicatoria\\
+Agradecimientos\\
+Prólogo\\}
+{\only<7->{\color{green}}Capítulos\\}
+{\only<8->{\color{blue}}Apéndices\\
+Anexos\\
+Índices alfabéticos}
+\end{center}
+\end{acla}
+\end{minipage}}
+\end{center}
+}
+\only<6->{Pero todos tienen en común: }\only<6->{\color{red}\textbf<6>{frontmatter}}\only<7->{{\color{black},}\color{green}\textbf<7>{mainmatter}} \only<8->{{\color{black}y} {\color{blue}\textbf<8>{backmatter}}}
+\end{frame}
+
+
+\subsection{Portada}
+
+\begin{frame}[fragile]{La portada (I)}
+\only<1->{Para generar un título existe \texttt{\backS maketitle} que se sirve de los campos que le preceden}
+
+\only<2->{
+\begin{itemize}
+\item \alert<2>{\textbf<2>{\texttt{\backS title\{}{\em El título}\texttt{\}}}}
+\item \alert<3>{\textbf<3>{\texttt{\backS author\{}{\em El autor}\texttt{\}}}}
+\item \alert<4>{\textbf<4>{\texttt{\backS date\{}{\em La fecha (recomiendo el comando \texttt{\backS today})}\texttt{\}}}}
+\item \alert<5>{\textbf<5>{\texttt{\backS thanks\{}{\em Nota al pie de página}\texttt{\}}}}
+\end{itemize}
+}
+\visible<6->{
+\begin{minipage}{0.35\textwidth}
+\begin{sintax}{\texttt{\backS maketitle}}
+ \texttt{[{\em campos previos}]}\\
+
+...
+
+\texttt{\backS maketitle}
+\end{sintax}
+\end{minipage}}%
+\pause\pause\pause\pause\pause\pause%
+\hfill%
+\begin{minipage}{0.6\textwidth}
+\begin{ejem}{\texttt{\backS maketittle}}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\documentclass[a4paper, 10pt]{report}
+\title{Sobre la distribución de perros en Gandía}
+\author{Jaimito García\thanks{El amo de los perros}}
+\date{\today}
+\begin{document}
+\maketitle
+% . . . 
+\end{document}
+\end{lstlisting}
+\end{ejem}
+\end{minipage}
+
+
+\end{frame}
+
+
+\begin{frame}[fragile]{La portada (II)}
+También está el entorno \texttt{titlepage}, que permite hacer más de una portada:
+\pause
+
+\begin{minipage}{0.3\textwidth}
+\begin{sintax}{\texttt{titlepage}}
+ \texttt{\backS begin\{titlepage\}}\\
+{\em Texto con formato} \\
+\texttt{\backS end\{titlepage\}}
+\end{sintax}
+\end{minipage}%
+\pause
+\hfill
+\begin{minipage}{0.6\textwidth}
+\begin{ejem}{\texttt{\backS titlepage}}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\documentclass[a4paper, 10pt]{report}
+% . . .
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\vfill
+{\LARGE UNIVERSIDAD POLITÉCNICA DE MADRID}
+\vspace{1cm}
+{\sc{\Huge Grado en Ingeniería Electrónica y Automática}}
+\vspace{1cm}
+{\Large Jaimito García}
+\vfill
+\end{center}
+\end{titlepage}
+% . . .
+\end{document}
+\end{lstlisting}
+\end{ejem}
+\end{minipage}
+\end{frame}
+
+
+\subsection{Índices}
+
+\begin{frame}[fragile]{Los índices}
+Básicamente hay tres tipos de índices:
+\only<2->{
+\begin{itemize}
+\item Índice de contenidos, {\sc toc}  ({\em table of contents})
+\item Índice de figuras
+\item Índice de cuadros
+\end{itemize}}
+
+\only<3->{Para incluirlos se escribe simplemente el comando correspondiente a cada uno. \alert<4->{\textbf<4->{\LaTeX{} se encarga de hacer el resto}}.}
+
+\begin{minipage}{0.35\textwidth}
+\only<5->{
+\begin{sintax}{Índice de contenidos}
+ \texttt{\backS tableofcontents}
+\end{sintax}
+}
+\only<6->{
+\begin{sintax}{Índice de figuras}
+ \texttt{\backS listoffigures}
+\end{sintax}
+}
+\only<7->{
+\begin{sintax}{Índice de tablas}
+ \texttt{\backS listoftables}
+\end{sintax}
+}
+\end{minipage}%
+\pause\pause\pause\pause\pause\pause\pause%
+\hfill%
+\begin{minipage}{0.6\textwidth}
+\begin{ejem}{Los índices}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\documentclass[a4paper, 10pt]{report}
+% . . . 
+\begin{document}
+% . . . 
+%CONTENIDO
+\tableofcontents
+%FIGURAS
+\listoffigures
+%TABLAS
+\renewcommand\listtablename{Índice de tablas} % no de cuadros
+\listoftables
+% . . . 
+\end{document}
+\end{lstlisting}
+\end{ejem}
+\end{minipage}
+\end{frame}
+
+\subsection{Resumen}
+
+\begin{frame}[fragile]{El resumen o {\em abstract}}
+Esta parte solo se puede añadir en \alert<1>{documentos de tipo artículo o memoria}. En los \alert<1>{libros}, el entorno que se emplea \alert<1>{no está disponible}.
+
+\pause
+\begin{minipage}{0.3\textwidth}
+\begin{sintax}{\texttt{\backS abstract}}
+ \texttt{\backS begin\{abstract\}}\\
+{\em Texto del resumen} \\
+\texttt{\backS end\{abstract\}}
+\end{sintax}
+\end{minipage}%
+\pause%
+\hfill%
+\begin{minipage}{0.6\textwidth}
+\begin{ejem}{\texttt{\backS abstract}}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\begin{abstract}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis tincidunt augue ac vestibulum. Maecenas elementum lorem scelerisque leo adipiscing, non interdum mauris vestibulum. Donec eu quam nec erat dapibus scelerisque lobortis et mauris. Aenean ut molestie mauris.
+\end{abstract}
+\end{lstlisting}
+\end{ejem}
+\end{minipage}
+\end{frame}
+
+\subsection{Cuerpo}
+
+\begin{frame}{Las partes del cuerpo (I)}
+\only<1>{
+Existen en  \LaTeX{}  \textbf{\color{miverdeO}instrucciones} para ordenar jerárquicamente los conceptos e ideas de un documento con el fin de \textbf{\color{miverdeO}organizar} todo.}
+
+\only<2->{Dependiendo del \alert<2>{tipo de documento} se consideran \alert<2>{algunas divisiones} o no}
+
+\only<3->{
+\begin{sintax}{Unidades de estructura}
+\texttt{\backS {\em instrucción}[{\em título {\sc toc}}]\{{\em título}\}}
+
+\only<3-8>{
+{\centering o bien}
+
+\texttt{\backS {\em instrucción}*\{{\em título}\}}}
+\end{sintax}
+}
+\only<4-8>{
+La sintaxis con asterisco (\alert<4>{\textbf<4>{*}}) sirve para \alert<4>{\textbf<4>{evitar}} que la unidad se \alert<4>{\textbf<4>{numere}} y que \alert<4>{\textbf<4>{aparezca en la {\sc toc}}}.}
+\only<5-8>{
+\begin{itemize}
+\item \alert<6>{\texttt{\em \backS instrucción} se refiere a la unidad de estructura}
+\item  \alert<7>{\texttt{\em título {\sc toc}} es el nombre que se mostrará en la {\sc toc} para esa unidad}
+\item \alert<8>{ \texttt{\em título} es el título de la unidad}
+\end{itemize}
+}
+\only<9->{
+\begin{defi}{Las unidades de estructura}
+\begin{table}
+{\small
+% Table generated by Excel2LaTeX from sheet 'Hoja1'
+\begin{tabular}{|l|l|c|c|}
+\hline
+    Nombre &   Sintaxis &    {\em article} & {\em book} y {\em report} \\
+\hline
+     Parte &         \texttt{\backS part[título{\sc toc}]\{título\}}      &  \neutro (opc.)    &      \neutro (opc.)      \\
+\hline
+  Capítulo &         \texttt{\backS chapter[título{\sc toc}]\{título\}}        &    \mal    &   \bien   \\
+\hline
+   Sección &          \texttt{\backS section[título{\sc toc}]\{título\}}       &    \bien        &      \bien      \\
+\hline
+Subsección &         \texttt{\backS subsection[título{\sc toc}]\{título\}}         &      \bien      &      \bien      \\
+\hline
+Subsubsección &        \texttt{\backS subsubsection[título{\sc toc}]\{título\}}           &    \bien        &       \bien     \\
+\hline
+   Párrafo &           \texttt{\backS paragraph[título{\sc toc}]\{título\}}         &      \bien      &      \bien      \\
+\hline
+Subpárrafo &         \texttt{\backS subparagraph[título{\sc toc}]\{título\}}         &      \bien      &       \bien     \\
+\hline
+\end{tabular}  
+}
+\end{table}
+\end{defi}
+}
+
+\end{frame}
+
+\begin{frame}{Las partes del cuerpo (II)}
+Estas instrucciones van en el \alert{cuerpo del documento}, y su alcance va desde su llamada hasta la llamada a otra instrucción de estructura.
+\end{frame}
+
+\begin{frame}[fragile]{Las partes del cuerpo (II)}
+\vspace{-0.2cm}
+\begin{ejem}{Unidades de estructura ({\em report}) (I)}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\documentclass[11pt, twoside, a4paper]{report}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\begin{document}
+\part{La taxonomia de un gato doméstico}
+\chapter{Las tres primeras divisiones}
+La taxonomía es, en su sentido más general, la ciencia de la clasificación. Habitualmente, se emplea el término para %. . .
+Las tres primeras divisiones para clasificar, por ejemplo, un gato son: 
+\begin{itemize}
+\item Dominio: Eucarya
+\item Reino: Animalia
+\item Subreino: Eumetazoa
+\end{itemize}
+Referidas a: organismos celulares con núcleos verdaderos, capacidad de locomoción, consumen oxígeno, nutrición por ingestión, reproducción sexual y desarrollo embrionario, presentan tejidos, órganos, masa corporal, etc.
+\section{De forma más anidada}
+Las siguientes tres divisiones son: 
+\begin{itemize}
+\item Filo: Chordata
+\item Subfilo: Vertebrata  
+\item Clase: Mammalia
+\end{itemize}
+Debido a : existencia de cuerda dorsal, columna vertebral, ser mamíferos que se caracterizan por tener glándulas mamarias, pelo y mandíbulas.
+\subsection{Aún más anidado}
+Las siguientes tres divisiones son: 
+\end{lstlisting}
+\end{ejem}
+\end{frame}
+
+
+\begin{frame}[fragile]{Las partes del cuerpo (II)}
+\vspace{-0.2cm}
+\begin{ejem}{Unidades de estructura  ({\em report}) (II)}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\begin{itemize}
+\item Subclase: Theria
+\item Infraclase: Placentalia
+\item Orden: Carnívora
+\end{itemize}
+Porque el embrión se forma en el útero materno, las crías permanecen en el útero materno durante largo tiempo y los molares están adaptados para el consumo de carne.
+\subsubsection{Anidadísimo}
+Las siguientes tres divisiones son: 
+\begin{itemize}
+\item Suborden: Feliformia
+\item Familia: Felidae
+\item Subfamilia: Felinae
+\end{itemize}
+Debido a su  anatomía felina, estar entre los grandes y pequeños félidos y ser incapaces de rugir.
+\paragraph{Al final de la clasificación}
+Las siguientes tres divisiones son: 
+\begin{itemize}
+\item Género: Felis
+\item Especie: Felis silvestris
+\item Subespecie: Felis silvestris catus
+\end{itemize}
+Porque son Linnaeus, gatos pequeños y finalmente, esa es la denominación de la Comisión Internacional de  Nomenclatura Zoológica
+\subparagraph{Finalmente}
+La clasificación de los gatos es un ejemplo de la organización jerárquica de las ideas, ¡y ya podéis ver lo útil que es!
+\end{document}
+\end{lstlisting}
+\end{ejem}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Las partes del cuerpo (II)}
+\vspace{-0.1cm}
+\begin{center}
+\only<1->{
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=1]{FigurasEjemplos/Cuerpo}}
+\end{figure}
+\end{minipage}}%
+\hfill
+\only<2->{
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=2]{FigurasEjemplos/Cuerpo}}
+\end{figure}
+\end{minipage}}%
+\hfill
+\only<3->{
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=3]{FigurasEjemplos/Cuerpo}}
+\end{figure}
+\end{minipage}}%
+\end{center}
+\end{frame}
+
+\subsection{Anexos}
+
+\begin{frame}[fragile]{Los anexos}
+
+La forma de escribir un anexo es muy parecida a la del resto de elementos del cuerpo. \visible<2->{{\color{miverdeO}De hecho es igual}, pero hay que indicar que lo que viene a continuación se debe tratar como anexos.}
+
+\visible<3->{La manera de avisar a \LaTeX{} es mediante el comando \texttt{\backS appendix}}
+
+\visible<4->{
+\begin{minipage}{0.42\textwidth}
+\begin{sintax}{\texttt{\backS appendix}}
+\texttt{\backS appendix}\\
+\texttt{\backS chapter\{}{\em Título del primer apéndice}\texttt{\}}\\
+\vdots
+\end{sintax}
+\end{minipage}}%
+\pause\pause\pause\pause%
+\hfill%
+\begin{minipage}{0.49\textwidth}
+\begin{ejem}{\texttt{\backS appendix}}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\documentclass[a4paper, 10pt]{report}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\begin{document}
+% . . . 
+\appendix
+\chapter{Acerca de los métodos empleados}
+\section{Sobre los datos a los que se hace referencia en el capítulo 2}
+% . . . 
+\end{document}
+\end{lstlisting}
+\end{ejem}
+\end{minipage}
+
+
+\end{frame}
+
+
+
+\subsection{Bibliografía}
+
+\begin{frame}{La bibliografía (I)}
+\begin{itemize}
+\item <1-> Aparece {\color{miverdeO}al final} del documento de forma {\color{miverdeO}ordenada y/o numerada} según un criterio
+\item <2-> Las referencias se hacen mediante etiquetas, que \LaTeX{} enlaza automáticamente
+\item <3-> El entorno para la bibliografía se llama \alert<3>{\texttt{thebibliography}}
+\item <4-> La manera de referenciar es mediante el comando \alert<4>{\texttt{\backS cite}}
+\end{itemize}
+
+\visible<5->{
+\begin{minipage}{0.58\textwidth}
+\begin{sintax}{\texttt{thebibliography}}
+\texttt{\backS begin\{thebibliography\}\{{\em long. máxima}\}}\\
+\vdots
+
+\texttt{\backS bibitem[{\em leyenda}]\{{\em etiqueta}\} \{{\em texto}\}}
+
+\vdots
+
+\texttt{\backS end\{thebibliography\}}\\
+\end{sintax}
+\end{minipage}}%
+\visible<6->{
+\hfill
+\begin{minipage}{0.39\textwidth}
+\begin{sintax}{\texttt{cite}}
+\texttt{\backS cite[{\em opcional}]\{{\em etiqueta}\}}\\
+\end{sintax}
+\only<7->{\texttt{{\em opcional}} es un texto que se puede añadir a la referencia cuando es llamada.}
+\end{minipage}%
+}
+\only<8>{
+\vfill
+Existe otro método  mediante el comando  \alert<8>{\texttt{\backS bibliography}} que se complementa con el formato de archivos \alert<8>{\textbf<8>{BIB\TeX{}}}}
+\end{frame}
+
+\begin{frame}[fragile]{La bibliografía (II)}
+\begin{ejem}{\texttt{thebibliography}}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Bibliografía}
+\bibitem{Mathews, Fink}{\bf Mathews, J. H., Fink, K. T.} {\it (2008) Métodos numéricos con MATLAB, 3ª edición. Prentice-Hall.}
+\bibitem{Faires, Burden}{\bf Faires, J.D., Burden, R.} {\it (2004) Métodos numéricos, 3ª edición. Thomson.}
+\bibitem{Mantilla}{\bf Ignacio Mantilla} {\it Análisis numérico.} Universidad Nacional de Colombia
+\bibitem{Kreyszig}{\bf E.Kreyszig} {\it Matemáticas Avanzadas para Ingenieros. Limusa, México.}
+\bibitem{Zapateiro, Fernandez} {\bf Zapateiro, J. V., Fernández, V. O.}{\it Análisis numérico. Notas de clase. Uninorte.}
+\end{thebibliography}
+\end{lstlisting}
+\end{ejem}
+\pause
+\vspace{-0.2cm}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\alt<2->{\node[opacity=1]{\includegraphics[height=0.4\textheight]{FigurasEjemplos/bibliografia2}};}
+{\node[opacity=0.01]{\includegraphics[height=0.4\textheight]{FigurasEjemplos/bibliografia2}};}
+\end{tikzpicture}
+\end{figure}
+\end{frame}
+
+
+
+\subsection{¡Manos a la obra!}
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report }
+\vspace{-0.1cm}
+\begin{center}
+\only<1->{
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=1]{FigurasEjemplos/Ejercicio2}}
+\end{figure}
+\end{minipage}}%
+\hfill
+\only<2->{
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=2]{FigurasEjemplos/Ejercicio2}}
+\end{figure}
+\end{minipage}}%
+\hfill
+\only<3->{
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=3]{FigurasEjemplos/Ejercicio2}}
+\end{figure}
+\end{minipage}}%
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report }
+\vspace{-0.1cm}
+\begin{center}
+\only<1->{
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=4]{FigurasEjemplos/Ejercicio2}}
+\end{figure}
+\end{minipage}}%
+\hfill
+\only<2->{
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=5]{FigurasEjemplos/Ejercicio2}}
+\end{figure}
+\end{minipage}}%
+\hfill
+\only<3->{
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=6]{FigurasEjemplos/Ejercicio2}}
+\end{figure}
+\end{minipage}}%
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report}
+\vspace{-0.5cm}
+\begin{lstlisting}
+%PAQUETES Y CONFIGURACIÓN DEL DOCUMENTO (PREÁMBULO)
+\documentclass[11pt, twoside, a4paper]{report}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\newcommand{\micomando}[1]{Esta es la frase predefinida en mi comando, y mi nombre es #1}
+%	EL CUERPO
+\begin{document}
+% Antes de nada...
+\title{Este es el título de nuestra memoria, la portada}
+\author{Oscar Cabrero Bertram}
+\date{\today}  
+\maketitle
+%Índice
+\tableofcontents
+%Resumen
+\begin{abstract}
+Este es mi primer resúmen. Me parece raro que solo tenga que preocuparme por lo que quiero decir, y no por cómo tengo que presentarlo. En esta memoria expondremos la mayor parte de las cosas que hemos aprendido en este curso.
+\end{abstract}
+%Contenido
+\chapter{Mi primer capítulo}
+Este es el párrafo de entrada a mi primer capítulo. A continuación se presenta la primera sección en \LaTeX{}.
+\section{Mi primera sección}
+En este primer ejercicio escribiremos en {\bf negrita}, en {\it cursiva o itálica} y en tipo {\sc small caps}. En cuanto a los entornos, diremos tres cosas:
+\end{lstlisting}%
+\end{frame}
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\begin{itemize}
+\item Esta es la primera cosa.
+\item Esta es la segunda cosa.
+\item Esta es la tercera cosa, y la más importante de todas.
+\end{itemize}
+Por otra parte, utilizaremos nuestro primer comando: \micomando{Oscar}.
+\begin{center}
+{\LARGE ¡Me encanta esto del \LaTeX{}!}
+\end{center
+\subsection{Mi primera subsección}
+Esta es mi primera subsección, y tiene un párrafo:
+\paragraph{Primer párrafo} En este párrafo tengo que decir que estoy muy contento por todo lo que he aprendido en \cite{Cabrero}
+%Apéndices
+\appendix
+\chapter{Información adicional}
+Aquí iremos poniendo información que complemente al documento general.
+%Bibliografía
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Bibliografía}
+\bibitem{Cabrero}{\bf Cabrero Bertram, O} {\it (2013) Diapositivas de clase}
+\end{thebibliography}
+\end{document}
+\end{lstlisting}%
+
+\end{frame}
+
+
+

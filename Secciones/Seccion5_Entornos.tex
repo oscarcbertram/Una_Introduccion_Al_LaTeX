@@ -1,0 +1,512 @@
+\section{Entornos}
+
+\subsection{Listas}
+
+\begin{frame}{Los tipos de listas}
+\only<1>{\begin{quote}
+Creo en las listas, me encantan. Soy ingeniero industrial, de ahí que ame los números y si amas los números, amas las listas.
+\end{quote}
+\begin{flushright} Albert Espinosa \end{flushright}}
+\only<2-5>{
+\begin{itemize}
+\item <2-> \alert<2>{Las listas sirven para presentar información estructurada}
+\item <3-> \alert<3>{Pueden anidarse}
+\item <4-> \alert<4>{\LaTeX{} se encarga de los contadores y de las sangrías relativas}
+\item <5-> Tipos de listas:
+\begin{itemize}
+\item Listas con viñetas
+\item Listas numeradas
+\item Listas descriptivas
+\end{itemize}
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}[fragile]{Listas de tipo viñetas}
+\only<1->{
+\begin{minipage}{0.65\textwidth}
+\begin{itemize}
+\item <1->{Los diferentes \alert<1->{\textbf<1>{ítems}} se identifican mediante una viñeta o \alert<1->{marca común}}
+
+\item <2->{El entorno empleado se denomina \texttt{itemize}}
+\end{itemize}
+\end{minipage}}%
+\hfill%
+\only<3->{
+\begin{minipage}{0.3\textwidth}
+\begin{sintax}{\texttt{itemize}}
+ \texttt{\backS begin\{itemize\}}\\
+\texttt{\backS item }{\em Texto 1}  \\
+\texttt{\backS item }{\em Texto 2}  \\
+
+\vdots
+
+\texttt{\backS end\{itemize\}}
+\end{sintax}
+\end{minipage}
+}
+\pause\pause\pause
+
+\begin{minipage}{0.4\textwidth}
+\vspace{-1cm}
+\begin{ejem}{\texttt{itemize}}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\begin{itemize}
+\item Pan
+\item Leche
+\item Huevos
+\item Carnicería:
+\begin{itemize}
+\item Pollo
+\item Jamón serrano
+\item Hamburguesas
+\end{itemize}
+\item Refrescos
+\end{itemize}
+\end{lstlisting}
+\end{ejem}
+\end{minipage}%
+\pause%
+\hspace{1cm}%
+\begin{minipage}{0.4\textwidth}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\alt<5->{\node[opacity=1]{\includegraphics[height=0.4\textheight]{FigurasEjemplos/itemize}};}
+{\node[opacity=0.01]{\includegraphics[height=0.4\textheight]{FigurasEjemplos/itemize}};}
+\end{tikzpicture}
+\end{figure}
+\end{minipage}
+\hfill
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{Listas numeradas}
+\only<1->{
+\begin{minipage}{0.65\textwidth}
+\begin{itemize}
+\item <1->{Los \alert<1->{\textbf<1>{ítems}} se identifican mediante \alert<1->{marcas de orden} (números, letras, \ldots)}
+
+\item <2->{El entorno empleado se denomina \texttt{enumerate}}
+\end{itemize}
+\end{minipage}}%
+\hfill%
+\only<3->{
+\begin{minipage}{0.3\textwidth}
+\begin{sintax}{\texttt{enumerate}}
+ \texttt{\backS begin\{enumerate\}}\\
+\texttt{\backS item }{\em Texto 1}  \\
+\texttt{\backS item }{\em Texto 2}  \\
+
+\vdots
+
+\texttt{\backS end\{enumerate\}}
+\end{sintax}
+\end{minipage}
+}
+\pause\pause\pause
+
+\begin{minipage}{0.4\textwidth}
+\vspace{-1cm}
+\begin{ejem}{\texttt{enumerate}}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\begin{enumerate}
+\item Pan
+\item Leche
+\item Huevos
+\item Carnicería:
+\begin{enumerate}
+\item Pollo
+\item Jamón serrano
+\item Hamburguesas
+\end{enumerate}
+\item Refrescos
+\end{enumerate}
+\end{lstlisting}
+\end{ejem}
+\end{minipage}%
+\pause%
+\hspace{1cm}%
+\begin{minipage}{0.4\textwidth}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\alt<5->{\node[opacity=1]{\includegraphics[height=0.4\textheight]{FigurasEjemplos/enumerate}};}
+{\node[opacity=0.01]{\includegraphics[height=0.4\textheight]{FigurasEjemplos/enumerate}};}
+\end{tikzpicture}
+\end{figure}
+\end{minipage}
+\hfill
+\end{frame}
+
+
+
+
+
+\begin{frame}[fragile]{Listas  descriptivas}
+\only<1->{
+\begin{minipage}{0.6\textwidth}
+\begin{itemize}
+\item <1->{Los \alert<1->{\textbf<1>{ítems}} son conceptos que se describen}
+\item <2->{El entorno empleado se denomina \texttt{description}}
+\end{itemize}
+\end{minipage}}%
+\hfill%
+\only<3->{
+\begin{minipage}{0.35\textwidth}
+\begin{sintax}{\texttt{description}}
+ \texttt{\backS begin\{description\}}\\
+\texttt{\backS item [{\em etiqueta}]}{\em Texto 1}  \\
+\texttt{\backS item  [{\em etiqueta}]}{\em Texto 2}  \\
+
+\vdots
+
+\texttt{\backS end\{description\}}
+\end{sintax}
+\end{minipage}
+}
+\pause\pause\pause
+
+\begin{minipage}{0.4\textwidth}
+\vspace{-1cm}
+\begin{ejem}{\texttt{description}}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\begin{description}
+\item [Pan:] comprar en la panadería
+\item [Leche:] comprar en el supermercado
+\item [Huevos:] comprar en el supermercado
+\item [Carnicería:]\hspace{0pt}\par
+\begin{itemize}
+\item Pollo
+\item Jamón serrano
+\item Hamburguesas
+\end{itemize}
+\item [Refrescos:] comprar en el bazar
+\end{description}
+\end{lstlisting}
+\end{ejem}
+\end{minipage}%
+\pause%
+\hspace{1cm}%
+\begin{minipage}{0.4\textwidth}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\alt<5->{\node[opacity=1]{\includegraphics[height=0.4\textheight]{FigurasEjemplos/description}};}
+{\node[opacity=0.01]{\includegraphics[height=0.4\textheight]{FigurasEjemplos/description}};}
+\end{tikzpicture}
+\end{figure}
+\end{minipage}
+\hfill
+\end{frame}
+
+
+
+
+
+\subsection{Notas}
+
+
+\begin{frame}[fragile]{Las notas al pie de página}
+
+\begin{itemize}
+\item <1->Las notas son advertencias, explicaciones o comentarios que se sitúan fuera del texto general
+\item <2->Se introducen mediante una marca (v.g. cifra o letra)
+\end{itemize}
+\only<3->{
+\begin{sintax}{\texttt{\backS footnote}}
+\texttt{\backS footnote[número\only<4>{ \alert<4>{(opcional)}}]\{{\em Texto de la nota}\}}
+\end{sintax}}
+
+\pause\pause\pause\pause
+\begin{minipage}{0.6\textwidth}
+\begin{ejem}{\texttt{\backS footnote}}
+\vspace{-0.5cm}
+\begin{lstlisting}
+Este texto tiene dos notas\footnote{Esta es la primera nota} al pie de página que, gracias a \LaTeX{}, se numeran solas\footnote{Esta es la segunda nota}.
+\end{lstlisting}
+\end{ejem}
+\end{minipage}%
+\pause%
+\hfill%
+\begin{minipage}{0.39\textwidth}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\alt<5->{\node[opacity=1]{\includegraphics[width=\textwidth]{FigurasEjemplos/footnote}};}
+{\node[opacity=0.01]{\includegraphics[width=\textwidth]{FigurasEjemplos/footnote}};}
+\end{tikzpicture}
+\end{figure}
+\end{minipage}
+
+\end{frame}
+
+
+\subsection{Alineación del texto}
+
+
+\begin{frame}[fragile]{Alineación del texto}
+
+\begin{itemize}
+\item <1->Normalmente alineamos a la izquierda, a la derecha o al centro
+\item <2->\LaTeX{} se encarga de \alert<2>{justificar} el texto automáticamente
+\item <3->Los entornos son: \texttt{flushright} (dcha.), \texttt{flushleft} (izq.), \texttt{center} (centro)
+\end{itemize}
+\begin{center}
+\only<4->{
+\begin{minipage}{0.3\textwidth}
+\begin{sintax}{\texttt{flushright}}
+\texttt{\backS begin\{flushright\}}\\
+{\it Texto}\\
+\texttt{\backS end\{flushright\}}
+\end{sintax}
+\end{minipage}}%
+\hspace{1cm}
+\only<5->{
+\begin{minipage}{0.3\textwidth}
+\begin{sintax}{\texttt{flushleft}}
+\texttt{\backS begin\{flushleft\}}\\
+{\it Texto}\\
+\texttt{\backS end\{flushleft\}}
+\end{sintax}
+\end{minipage}}%
+\end{center}
+\only<6->{
+\begin{center}
+\begin{minipage}{0.3\textwidth}
+\begin{sintax}{\texttt{center}}
+\texttt{\backS begin\{center\}}\\
+{\it Texto}\\
+\texttt{\backS end\{center\}}
+\end{sintax}
+\end{minipage}
+\end{center}}
+
+\end{frame}
+
+
+\subsection{Tablas}
+
+
+\begin{frame}[fragile]{Las tablas (I)}
+
+\begin{itemize}
+\item <1->Son un elemento {\color{red}{\bf delicado}} en \LaTeX{}: no son sencillas de construir
+\item <2-> Son muy {\color{miverdeO}{\bf flexibles}}
+\item <3-> Existen {\color{miverdeO}complementos} que vinculan \LaTeX{} y {\color{miverdeO}Excel} \only<4>{\bien}
+\item <5-> El entorno empleado es \texttt{tabular}
+\end{itemize}
+\only<6->{
+\begin{sintax}{\texttt{tabular}}
+\texttt{\backS begin\{tabular\}[{\em posicion}]\{{\em formato columnas}\}}\\
+$elem_{11}$ \texttt{\&} $elem_{12}$ \texttt{\&} \ldots  \texttt{\&} $elem_{1m}$ \backS\backS\\
+$elem_{11}$ \texttt{\&} $elem_{22}$ \texttt{\&} \ldots  \texttt{\&} $elem_{2m}$ \backS\backS\\
+\vdots
+
+$elem_{n1}$ \texttt{\&} $elem_{n2}$ \texttt{\&} \ldots  \texttt{\&} $elem_{nm}$ \backS\backS\\
+\texttt{\backS end\{tabular\}}
+\end{sintax}}
+\end{frame}
+
+
+\begin{frame}[fragile]{Las tablas (II)}
+\vspace{-0.3cm}
+\begin{minipage}{0.5\textwidth}
+\begin{ejem}{\texttt{tabular}}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\begin{tabular}{lccc}
+      País &      Total &     Perros &      Gatos \\
+    España &       3000 &       1600 &       1400 \\
+    Angola &       5000 &       3000 &       2000 \\
+   Hungría &       3200 &       2800 &        400 \\
+      Perú &       1300 &        400 &        900 \\
+\end{tabular}
+\end{lstlisting}
+\end{ejem}
+\end{minipage}%
+\pause%
+\hfill%
+\begin{minipage}{0.39\textwidth}
+\vspace{0.15cm}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\alt<2->{\node[opacity=1]{\includegraphics[width=\textwidth]{FigurasEjemplos/tabular}};}
+{\node[opacity=0.01]{\includegraphics[width=\textwidth]{FigurasEjemplos/tabular}};}
+\end{tikzpicture}
+\end{figure}
+\end{minipage}
+
+\pause
+\begin{minipage}{0.5\textwidth}
+\vspace{-0.2cm}
+\begin{ejem}{\texttt{tabular}}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\begin{tabular}{|l|c|c|c|}
+\hline
+      País &      Total &     Perros &      Gatos \\
+\hline
+    España &       3000 &       1600 &       1400 \\
+\hline
+    Angola &       5000 &       3000 &       2000 \\
+\hline
+   Hungría &       3200 &       2800 &        400 \\
+\hline
+      Perú &       1300 &        400 &        900 \\
+\hline
+\end{tabular}  
+\end{lstlisting}
+\end{ejem}
+\end{minipage}%
+\pause%
+\hfill%
+\begin{minipage}{0.39\textwidth}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\alt<4->{\node[opacity=1]{\includegraphics[width=\textwidth]{FigurasEjemplos/tabular2}};}
+{\node[opacity=0.01]{\includegraphics[width=\textwidth]{FigurasEjemplos/tabular2}};}
+\end{tikzpicture}
+\end{figure}
+\end{minipage}
+
+\end{frame}
+
+
+
+
+
+
+
+
+\subsection{¡Manos a la obra!}
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report }
+\vspace{-0.1cm}
+\begin{center}
+\only<1>{
+Vamos a añadir, entre el final de la {\bf subsección 1.1.2} y el {\bf Apéndice A} otra sección con todo lo aprendido en este capítulo.}
+\only<2->{
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=1]{FigurasEjemplos/Ejercicio3}}
+\end{figure}
+\end{minipage}%
+\hspace{1cm}
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=2]{FigurasEjemplos/Ejercicio3}}
+\end{figure}
+\end{minipage}}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\newpage %Para  cambiar de página
+\section{Los entornos}
+\subsection{Las listas}
+En esta sección haremos tres tipos de listas, a saber:
+\begin{itemize}
+\item Una lista de viñetas, que es esta misma
+\item Una lista numerada
+\item Una lista descriptiva
+\end{itemize}
+Además, anidaremos las unas en las otras, y veremos como queda el resultado.\\%cambio de linea
+Ahí va la lista enumerada:
+\begin{enumerate}
+\item Este es el primer elemento de mi enumeración
+\item Este es el segundo elemento de mi enumeración, que se divide en:
+\begin{itemize}
+\item Un punto de tipo viñeta
+\item Otro punto de tipo viñeta
+\end{itemize}
+\end{enumerate}
+Además, una descripción puede albergar otra descripción, pero es necesario poner explícitamente el cambio de línea para comenzar una sublista:
+\begin{description}
+\item [Primer punto:] El cambio de línea en una descripción es necesario para una nueva lista
+\item [Por ejemplo:] El siguiente punto sería un posible resultado
+\item [Enumeración:]\hspace{0pt}\par
+\begin{enumerate}
+\item Primer punto
+\item Segundo punto
+\end{enumerate}
+\end{description}
+\end{lstlisting}%
+
+\end{frame}
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\subsection{Las notas al pie}
+Este es un ejemplo de nota al pie\footnote{Mi primera nota al pie.}. Es importante decir que las notas al pie no se anidan, es decir, no se puede llamar a una nota desde otra nota. Podemos, además, ponerle dos notas en la misma página, así \footnote{Nota de advertencia.}.\\
+Las notas al pie tienen un espacio reservado. Si ese espacio se sobre pasa, \LaTeX{} divide el contenido de la nota y pasa la parte sobrante a la página siguiente.
+\subsection{La justificación}
+Aquí pondremos en práctica la justificación del texto. Por ejemplo:
+\begin{flushright}
+Este texto está justificado a la derecha
+\end{flushright}
+\begin{flushleft}
+Este texto está justificado a la izquierda
+\end{flushleft}
+\begin{center}
+Este texto está muy bien centradito 
+\end{center}
+
+\subsection{Las tablas}
+Escribiremos en esta subsección lo que hemos aprendido respecto a las tablas en el capítulo {\sc entornos} de \cite{Cabrero}.
+\begin{center}
+\begin{tabular}{||l|c|r||}
+\hline
+\end{lstlisting}%
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report}
+\vspace{-0.5cm}
+\begin{lstlisting}
+{\bf Nombre} & {\bf Apellido} & {\bf Rol} \\
+\hline\hline
+Pepito & Pérez & Estudiante \\
+\hline
+Jorge & García & Estudiante \\
+\hline
+María & Piñales & Profesor \\
+\hline
+Olga & Roca & Administración \\
+\hline
+\end{tabular}
+\end{center}
+Por otra parte, si queremos hacer una casillla multicolumna, emplearemos el comando {\tt \textbackslash multicolumn\{{\em número columnas}\}\{{\em justificación}\}}\{{\em Texto}\}, y quedará el siguiente resultado (que se ha justificado a la derecha):
+\begin{flushright}
+\begin{tabular}{||l|c|r||}
+\hline
+\multicolumn{2}{||l|}{\bf Nombre Completo} & {\bf Rol} \\
+\hline\hline
+Pepito & Pérez & Estudiante \\
+\hline
+Jorge & García & Estudiante \\
+\hline
+María & Piñales & Profesor \\
+\hline
+Olga & Roca & Administración \\
+\hline
+\end{tabular}
+\end{flushright}
+\end{lstlisting}%
+
+\end{frame}
+
+

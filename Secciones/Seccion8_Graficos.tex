@@ -1,0 +1,483 @@
+\section{Los objetos flotantes}
+
+\begin{frame}{Introducción}
+\only<1-5>{
+\begin{itemize}
+\item <1-5> Objeto flotante: elemento \alert{desligado} normalmente de la secuencia del texto, que puede ser \alert{referenciado}
+\item <2-5> Puede tener tamaño \alert{grande}
+\item <3->{ Dos tipos:}
+	\only <4-5>{
+	\begin{itemize}
+	\item Cuadros (contienen tablas)
+	\item Figuras (contienen gráficos)
+	\end{itemize}}
+\item <5> {Normalmente habrá varios, e interesa crear un \alert{índice} de cada uno de los dos tipos mediante:
+	\begin{itemize}
+	\item \texttt{\backS listoffigures}
+	\item \texttt{\backS listoftables}
+	\end{itemize}
+}
+\end{itemize}
+}
+
+\only<6->{
+\begin{minipage}{0.6\textwidth}
+\only<6->{
+\begin{itemize}
+\item <6-> La sintaxis general de un objeto flotante es:
+\end{itemize}
+}
+
+\only<7->{
+
+\begin{sintax}{Objeto flotante}
+\texttt{\backS begin\{<figure>|<table>}\texttt{\}[}{\em posición}\texttt{]}\\
+{\em Objeto}\\
+\texttt{\backS caption[}{\em texto en el índice}\texttt{]\{}{\em texto en la leyenda}\texttt{\}}\\
+\texttt{\backS label\{}{\em etiqueta}\texttt{\}}\only<9->{\dotfill(recomendado)}\\
+\texttt{\backS end\{<figure>|<table>\}}
+\end{sintax}
+}
+
+\only<8->{Donde:
+\begin{itemize}
+\item <9->\texttt{caption}: Pie de tabla/figura
+\item <10->\texttt{label}: Etiqueta para referenciar el objeto
+\end{itemize}
+}
+\end{minipage}%
+\only<11->{
+\hfill
+\begin{minipage}{0.35\textwidth}
+Y donde {\em posición} puede tomar los valores:
+\only<12->{
+\begin{itemize}
+\item \texttt{h} (here): justo donde está el entorno
+\item \texttt{b} (bottom): abajo de la hoja
+\item \texttt{t} (top): arriba de la hoja
+\item \texttt{p} (page): en una hoja aparte
+\end{itemize}
+}
+\end{minipage}
+}
+}
+
+
+\end{frame}
+
+\subsection{Los cuadros}
+
+\begin{frame}[fragile]{Los cuadros: entorno \texttt{table}}
+
+\begin{minipage}{0.45\textwidth}
+\begin{ejem}{Cuadros}
+\vspace{-0.5cm}
+\begin{lstlisting}
+En la siguiente tabla (tabla \ref{tab: NotasClase}) se pueden ver las notas de clase:
+\begin{table}[hbtp]
+\begin{tabular}{||c|c|c||}
+\hline
+{\bf Nombre} & {\bf Apellido} & {\bf Puntuación} \\
+\hline \hline
+Marta & Cascón & 3.5 \\
+Juan & Gonzalez & 6.5 \\
+Pedro & Delgado & 9.3 \\
+Carlos & Perales & 8 \\
+\hline
+\end{tabular}
+\caption{Notas de clase}
+\label{tab: NotasClase}
+\end{table}
+Y son, en general, bastante satisfactorias.
+\end{lstlisting}
+\end{ejem}
+\end{minipage}%
+\pause%
+\hfill%
+\begin{minipage}{0.49\textwidth}
+En el siguiente cuadro (cuadro \ref{tab: NotasClase}) se pueden ver las notas de clase:
+\begin{table}[hbtp]
+\begin{tabular}{||c|c|c||}
+\hline
+{\bf Nombre} & {\bf Apellido} & {\bf Puntuación} \\
+\hline \hline
+Marta & Cascón & 3.5 \\
+Juan & Gonzalez & 6.5 \\
+Pedro & Delgado & 9.3 \\
+Carlos & Perales & 8 \\
+\hline
+\end{tabular}
+\caption{Notas de clase}
+\label{tab: NotasClase}
+\end{table}
+Y son, en general, bastante satisfactorias.
+\end{minipage}
+
+\end{frame}
+
+\subsection{Las figuras}
+
+\begin{frame}[fragile]{Inclusión de gráficos}
+\only<1>{Los gráficos en \LaTeX{} pueden ser internos (generados por el editor) o externos (nos centraremos en éstos)}
+\only<2-8>{
+\begin{minipage}{0.49\textwidth}
+Inclusión de gráficos externos:
+\begin{itemize}
+\item <2-8> Se empleará el paquete \texttt{graphicx}
+\item <4-8> En sus opciones se carga el compilador (PDF\LaTeX{})
+\item <5-8> Formatos aceptados: \textsc{jpg, jpeg, tif, tiff, png} y {\sc pdf}
+\item <6-8> Para cargar archivos vectoriales ({\sc eps}) emplearemos el paquete \texttt{epstopdf} para convertirlos a {\sc pdf}
+\end{itemize}
+\end{minipage}}%
+\only<2-8>{
+\hfill
+\begin{minipage}{0.49\textwidth}
+	\only<3-8>{
+		\begin{paquete}{\texttt{graphicx}}
+		\texttt{\backS usepackage[}{\em opciones}\texttt{]\{graphicx\}} 
+		\end{paquete}
+	}
+	\only<7-8>{
+		\begin{paquete}{\texttt{graphicx}}
+		\texttt{\backS usepackage\{epstopdf\}} 
+		\end{paquete}
+	}
+\end{minipage}
+}
+\only<8->{
+\begin{sintax}{\texttt{\backS includegraphics}}
+\texttt{\backS includegraphics[}{\em opciones}\texttt{]\{}{\em ruta de la figura}\texttt{\}}
+\end{sintax}
+}
+\only<9->{
+Las opciones de \texttt{\backS includegraphics} son:
+\begin{itemize}
+\item \texttt{width$=$}{\em anchura}: Anchura del gráfico
+\item \texttt{height$=$}{\em altura}: Altura del gráfico
+\item \texttt{keepaspectratio$=$}{\em true|false}: Escalado que no puede sobrepasar la mayor restricción entre anchura y altura
+\item \texttt{scale$=$}{\em escala}: Factor de escala sin considerar restricciones dimensionales
+\item \texttt{clip$=$}{\em true|false}: Para recortar la imagen a las dimensiones especificadas
+\item \texttt{draft$=$}{\em true|false}: Acelera la compilación: Si {\em true} se deja el hueco pero no se incluye el gráfico. Si {\em false} se incluye el gráfico
+\end{itemize}
+}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}[fragile]{Las figuras: entorno \texttt{figure}}
+\begin{minipage}{0.45\textwidth}
+\begin{ejem}{Figuras}
+\vspace{-0.5cm}
+\begin{lstlisting}
+En la figura \ref{fig: Manzana} se puede ver una apetitosa manzana
+\begin{figure}[hbtp]
+\includegraphics[width=1.5cm]{Figuras/Manzana.jpg}
+\caption{La apetitosa manzana}
+\label{fig: Manzana}
+\end{figure}
+El problema es que no puedo ajustar el texto al lado de la figura 
+\end{lstlisting}
+\end{ejem}
+\end{minipage}%
+\pause%
+\hfill%
+\begin{minipage}{0.49\textwidth}
+En la figura \ref{fig: Manzana} se puede ver una apetitosa manzana
+\begin{figure}[hbtp]
+\includegraphics[width=2.5cm]{Figuras/Manzana.jpg}
+\caption{La apetitosa manzana}
+\label{fig: Manzana}
+\end{figure}
+El problema es que no puedo ajustar el texto al lado de la figura 
+
+\visible<3->{\centering\mal}
+\end{minipage}
+\end{frame}
+
+
+
+\begin{frame}{Las figuras: entorno \texttt{wrapfigure}}
+
+
+\only<1>{Este entorno permite ajustar el texto alrededor de un gráfico}
+\only<2->{
+\begin{minipage}{0.45\textwidth}
+\begin{itemize}
+\item <2-> Se empleará el paquete \texttt{wrapfig}
+\item <4-> La sintaxis para su inclusión es la siguiente:
+\end{itemize}
+\end{minipage}}%
+\only<2->{
+\hfill
+\begin{minipage}{0.45\textwidth}
+	\only<3->{
+		\begin{paquete}{\texttt{wrapfig}}
+		\texttt{\backS usepackage\{wrapfig\}} 
+		\end{paquete}
+	}
+\end{minipage}
+}
+\only<5->{
+\begin{sintax}{\texttt{\backS wrapfigure}}
+\texttt{\backS begin\{wrapfigure\}\{}{\em alineación del gráfico}\texttt{\}\{}{\em anchura del gráfico}\texttt{\}}\\
+{\em Objeto}\\
+\texttt{\backS caption[}{\em texto en el índice}\texttt{]\{}{\em texto en la leyenda}\texttt{\}}\\
+\texttt{\backS label\{}{\em etiqueta}\texttt{\}}\\
+\texttt{\backS end\{wrapfigure\}}
+\end{sintax}
+}
+\end{frame}
+
+
+
+
+
+\begin{frame}[fragile]{Las figuras: entorno \texttt{wrapfigure}}
+
+
+\begin{minipage}{0.45\textwidth}
+\begin{ejem}{Figuras}
+\vspace{-0.5cm}
+\begin{lstlisting}
+En la figura \ref{fig: Manzana} se puede ver una apetitosa manzana
+\begin{wrapfigure}{r}{0.5\textwidth}
+\vspace{-10pt}
+\begin{center}
+\includegraphics[width=2.5cm, keepaspectratio]{Figuras/Manzana.jpg}
+\caption{La apetitosa manzana}
+\label{fig: Manzana}
+\vspace{-20pt}
+\end{center}
+\end{wrapfigure}
+Pero lo mejor de todo es que sin preocuparme por el formato, \LaTeX{} se encarga de escribir todo lo que ponga a continuación del entorno alrededor de la figura, y si ya ha alcanzado el final, vuelve a el ancho de página original. Por ejemplo, ahora estoy escribiendo de más para ver como se vuelve a justificar, y se puede ver perfectamente.
+\end{lstlisting}
+\end{ejem}
+\end{minipage}%
+\pause%
+\hfill%
+\begin{minipage}{0.49\textwidth}
+En la figura \ref{fig: Manzana} se puede ver una apetitosa manzana
+\begin{wrapfigure}{r}{0.5\textwidth}
+\vspace{-10pt}
+\begin{center}
+\includegraphics[width=2.5cm, keepaspectratio]{Figuras/Manzana.jpg}
+\caption{La apetitosa manzana}
+\label{fig: Manzana}
+\vspace{-20pt}
+\end{center}
+\end{wrapfigure}
+Pero lo mejor de todo es que sin preocuparme por el formato, \LaTeX{} se encarga de escribir todo lo que ponga a continuación del entorno alrededor de la figura, y si ya ha alcanzado el final, vuelve a el ancho de página original. Por ejemplo, ahora estoy escribiendo de más para ver como se vuelve a justificar, y se puede ver perfectamente.
+\end{minipage}
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+\subsection{¡Manos a la obra!}
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report }
+\only<1>{
+Añadiremos ahora a nuestra memoria los índices de figuras y de tablas, así como un nuevo capítulo para los objetos flotantes.
+}
+\only<2->{
+\vspace{-0.1cm}
+\begin{center}
+\only<2->{
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=1]{FigurasEjemplos/Ejercicio6}}
+\end{figure}
+\end{minipage}%
+\hspace{1cm}}
+\only<3->{
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=2]{FigurasEjemplos/Ejercicio6}}
+\end{figure}
+\end{minipage}}
+\end{center}
+}
+\end{frame}
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report }
+\vspace{-0.1cm}
+\begin{center}
+\only<1->{
+\hfill
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=3]{FigurasEjemplos/Ejercicio6}}
+\end{figure}
+\end{minipage}%
+\hfill}
+\only<2->{
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=4]{FigurasEjemplos/Ejercicio6}}
+\end{figure}
+\end{minipage}%
+\hfill}
+\only<3->{
+\begin{minipage}{0.32\textwidth}
+\begin{figure}[hbtp]
+\centering
+\fbox{\includegraphics[width=\textwidth, page=5]{FigurasEjemplos/Ejercicio6}}
+\end{figure}
+\end{minipage}}
+\end{center}
+\end{frame}
+
+
+
+
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report}
+\vspace{-0.75cm}
+\begin{lstlisting}
+\chapter{Los objetos flotantes}
+Aquí aplicaremos los dos entornos más usados relacionados con los objetos flotantes: las figuras y las tablas.
+\section{Las tablas o cuadros}
+Las tablas pueden ser un entorno simplemente que se incluye en el texto:
+\begin{center}
+\begin{tabular}{||c|c|c||}
+\hline
+{\bf Nombre} & {\bf Apellido} & {\bf Puntuación} \\
+\hline \hline
+Marta & Cascón & 3.5 \\
+Juan & Gonzalez & 6.5 \\
+Pedro & Delgado & 9.3 \\
+Carlos & Perales & 8 \\     \hline
+\end{tabular}
+\end{center}
+O se puede tratar de un entorno que se pueda referenciar como tabla, aparecer ordenado en un índice de tablas, poder ser editado en cuanto a posición y apariencia, etc.
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{||c|c|c||}
+\hline
+{\bf Nombre} & {\bf Apellido} & {\bf Puntuación} \\
+\hline \hline
+Marta & Cascón & 3.5 \\
+Juan & Gonzalez & 6.5 \\
+Pedro & Delgado & 9.3 \\
+Carlos & Perales & 8 \\     \hline
+\end{tabular}
+\end{center}
+\caption{Notas de clase}
+\label{tab: NotasClase}
+\end{table}
+\end{lstlisting}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report}
+\vspace{-0.5cm}
+\begin{lstlisting}
+El título del cuadro se puede poner encima del cuadro:
+\begin{table}[h]
+\caption{Notas de clase}
+\begin{center}
+\begin{tabular}{||c|c|c||}
+\hline      {\bf Nombre} & {\bf Apellido} & {\bf Puntuación} \\
+\hline \hline
+Marta & Cascón & 3.5 \\
+Juan & Gonzalez & 6.5 \\
+Pedro & Delgado & 9.3 \\
+Carlos & Perales & 8 \\       \hline
+\end{tabular}
+\end{center}  \label{tab: NotasClase}
+\end{table}
+Como objeto flotante, el cuadro se puede forzar, por ejemplo, para que se ubique en la base de la página (véase cuadro \ref{tab: cuadrobase})
+\begin{table}[b]
+\caption{Notas de clase}
+\begin{center}
+\begin{tabular}{||c|c|c||}
+\hline     {\bf Nombre} & {\bf Apellido} & {\bf Puntuación} \\
+\hline \hline
+Marta & Cascón & 3.5 \\
+Juan & Gonzalez & 6.5 \\
+Pedro & Delgado & 9.3 \\
+Carlos & Perales & 8 \\      \hline
+\end{tabular}
+\end{center}   \label{tab: cuadrobase}
+\end{table}
+\end{lstlisting}
+\end{frame}
+
+
+
+
+
+
+
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report}
+\vspace{-0.65cm}
+\begin{lstlisting}
+\section{Las figuras}
+En cuanto a las figuras, no nos olvidemos de incluir en el preámbulo el paquete correspondiente. Podemos incluir una figura definiendo su anchura (figura \ref{fig: ancho}), su altura (figura \ref{fig: alto}) o escalándola (figura \ref{fig: escalado}, en el tope de la página \pageref{fig: escalado}).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=2.5cm]{pajaro}
+\caption{Pájaro dimensionado por anchura}
+\label{fig: ancho}
+\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[height=2.5cm]{pajaro}
+\caption{Pájaro dimensionado por altura}
+\label{fig: alto}
+\end{figure}
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.3]{pajaro}
+\caption{Pájaro dimensionado por escalado}
+\label{fig: escalado}
+\end{figure}
+Podemos también aplicar la imagen respecto de unas dimensiones especificadas (figura \ref{fig: aplicacion}, situada en la base de la página \pageref{fig: aplicacion}).
+\begin{figure}[b]
+\centering
+\includegraphics[width=13cm, height=1.5cm, clip=true]{pajaro}
+\caption{Pájaro dimensionado estirado y ajustado a unas dimensiones}
+\label{fig: aplicacion}
+\end{figure}
+\end{lstlisting}
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{Nuestro ejemplo: Report}
+\vspace{-0.5cm}
+\begin{lstlisting}
+\subsection{Enmarcar la figura con el texto}
+Si queremos enmarcar la figura con un texto, solo tenemos que añadir el paquete \texttt{wrapfig} en el preámbulo y emplear el entorno correspondiente. Por ejemplo:
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+\vspace{-10pt}
+\begin{center}
+\includegraphics[width=2.5cm, keepaspectratio]{pajaro}
+\caption{El pájaro rodeado de texto y alineado a la derecha}
+\label{fig: enmarcado}
+\vspace{-20pt}
+\end{center}
+\end{wrapfigure}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in posuere neque, eget interdum mi. Maecenas magna enim, placerat nec sem quis, lobortis viverra est. Nulla vel blandit diam. Quisque commodo neque vel felis ornare, nec tincidunt eros bibendum. Duis pulvinar risus non porttitor dictum. Morbi ac nibh non diam feugiat cursus. Donec pulvinar, enim vitae ultrices pharetra, diam purus condimentum diam, sed iaculis nulla nunc nec nibh. In tellus tellus, vehicula sed molestie in, porttitor et est. Nulla facilisi. Aliquam vel sem eu felis sollicitudin molestie nec nec urna. Vivamus dictum, turpis mollis suscipit iaculis, sem odio mattis nisl, aliquet varius dui sem in eros. Maecenas elementum quis tortor vitae dictum. Aliquam fringilla congue purus eu consectetur. In viverra mi leo, sed placerat elit tempor vitae. Maecenas non elementum augue. Duis eu vehicula mi. Nunc eget scelerisque metus. Donec pretium congue mauris a pellentesque.
+\end{lstlisting}
+\end{frame}

@@ -1,0 +1,24 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------------------------------------------TÍTULO-----------------------------------------------------------------%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Una iniciación al \LaTeX]{\huge Una iniciación al \LaTeX}
+\subtitle{(Desde el cero absoluto)}
+\author[Oscar Cabrero Bertram]{Oscar Cabrero Bertram}
+\institute[Universidad Politécnica de Madrid] % (optional, but mostly needed)
+{
+}
+\date[12 de Marzo de 2013]{12 de Marzo de 2013}
+\subject{Talks} %Solo insertado en el PDF
+%------------------------------------------------FIN DE TÍTULO-------------------------------------------------------%
+
+%Para que aparezca el índice al iniciar sección
+\AtBeginSection[]
+{
+  \begin{frame}{Índice general}
+   \begin{multicols}{3}
+        \setcounter{tocdepth}{2}  
+        \tableofcontents[currentsection,subsections,hideothersubsections]
+   \end{multicols}
+ \end{frame}
+}

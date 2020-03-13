@@ -1,0 +1,29 @@
+\select@language {spanish}
+\contentsline {chapter}{\numberline {1}Mi primer cap\IeC {\'\i }tulo}{2}
+\contentsline {section}{\numberline {1.1}Mi primera secci\'on}{2}
+\contentsline {subsection}{\numberline {1.1.1}Mi primera subsecci\'on}{2}
+\contentsline {paragraph}{Primer p\'arrafo}{2}
+\contentsline {section}{\numberline {1.2}Los entornos}{3}
+\contentsline {subsection}{\numberline {1.2.1}Las listas}{3}
+\contentsline {subsection}{\numberline {1.2.2}Las notas al pie}{3}
+\contentsline {subsection}{\numberline {1.2.3}La justificaci\'on}{3}
+\contentsline {subsection}{\numberline {1.2.4}Las tablas}{4}
+\contentsline {chapter}{\numberline {2}Mi nuevo cap\IeC {\'\i }tulo}{5}
+\contentsline {section}{\numberline {2.1}Tipos de letra}{5}
+\contentsline {section}{\numberline {2.2}Colores}{5}
+\contentsline {section}{\numberline {2.3}Los espacios forzados}{5}
+\contentsline {section}{\numberline {2.4}Referencias cruzadas}{6}
+\contentsline {chapter}{\numberline {3}Las matem\'aticas}{7}
+\contentsline {section}{\numberline {3.1}Super\IeC {\'\i }ndices, sub\IeC {\'\i }ndices y puntos}{7}
+\contentsline {section}{\numberline {3.2}Fracciones}{8}
+\contentsline {section}{\numberline {3.3}Ra\IeC {\'\i }ces}{8}
+\contentsline {section}{\numberline {3.4}Sumatorios e integrales}{8}
+\contentsline {section}{\numberline {3.5}Matrices}{9}
+\contentsline {section}{\numberline {3.6}Funciones definidas a tramos}{10}
+\contentsline {section}{\numberline {3.7}Ecuaciones}{10}
+\contentsline {chapter}{\numberline {4}Los objetos flotantes}{11}
+\contentsline {section}{\numberline {4.1}Las tablas o cuadros}{11}
+\contentsline {section}{\numberline {4.2}Las figuras}{12}
+\contentsline {subsection}{\numberline {4.2.1}Enmarcar la figura con el texto}{12}
+\contentsline {chapter}{\numberline {A}Informaci\'on adicional}{14}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{15}

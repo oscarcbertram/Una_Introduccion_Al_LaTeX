@@ -1,0 +1,117 @@
+%------------------MIS DEFINICIONES PARA BEAMERS--------------------------%
+\newtheorem{defi}{Definición}
+\newtheorem{teor}{Teorema}
+\newtheorem{ejem}{Ejemplo}
+\newtheorem{lema}{Lema}
+\newtheorem{prop}{Proposición}
+\usecolortheme{default}
+\usefonttheme{serif}
+\useinnertheme{circles}
+\setbeamerfont{subsection in toc}{size=\footnotesize}
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+
+\newcommand{\backS}{\textbackslash}
+\newcommand{\bien}{\tikz[baseline=-0.75ex,miverdeO]{
+    \draw circle (2mm);
+\node[fill,circle,inner sep=0.5pt] (left eye) at (135:0.8mm) {};
+\node[fill,circle,inner sep=0.5pt] (right eye) at (45:0.8mm) {};
+\draw (-145:0.9mm) arc (-120:-60:1.5mm);
+    }
+}
+
+\newcommand{\mal}{\tikz[baseline=-0.75ex,red]{
+    \draw circle (2mm);
+\node[fill,circle,inner sep=0.5pt] (left eye) at (135:0.8mm) {};
+\node[fill,circle,inner sep=0.5pt] (right eye) at (45:0.8mm) {};
+\draw (-145:0.9mm) arc (120:60:1.5mm);
+    }
+}
+
+\newcommand{\neutro}{\tikz[baseline=-0.75ex,blue]{
+    \draw circle (2mm);
+\node[fill,circle,inner sep=0.5pt] (left eye) at (135:0.8mm) {};
+\node[fill,circle,inner sep=0.5pt] (right eye) at (45:0.8mm) {};
+\draw (-135:0.9mm) -- (-45:0.9mm);
+    }
+}
+
+% BLOQUE DE PAQUETE
+\newenvironment<>{paquete}[1]{%
+  \begin{actionenv}#2%
+      \def\insertblocktitle{\textbf{Paquete: }#1}%
+      \par%
+      \mode<presentation>{%
+        \setbeamercolor{block title}{fg=white,bg=orange}
+       \setbeamercolor{block body}{fg=black,bg=white!80!orange}
+       \setbeamercolor{itemize item}{fg=orange}
+       \setbeamertemplate{itemize item}[circle]
+     }%
+      \usebeamertemplate{block begin}}
+    {\par\usebeamertemplate{block end}\end{actionenv}}
+
+% BLOQUE DE EJEMPLO
+\newenvironment<>{ejem}[1]{%
+  \begin{actionenv}#2%
+      \def\insertblocktitle{\textbf{Ejemplo: }#1}%
+      \par%
+      \mode<presentation>{%
+        \setbeamercolor{block title}{fg=white,bg=miverdeO}
+       \setbeamercolor{block body}{fg=black,bg=white!80!miverdeO}
+       \setbeamercolor{itemize item}{fg=miverdeO}
+       \setbeamertemplate{itemize item}[circle]
+     }%
+      \usebeamertemplate{block begin}}
+    {\par\usebeamertemplate{block end}\end{actionenv}}
+
+% BLOQUE DE SINTAXIS
+\newenvironment<>{sintax}[1]{%
+  \begin{actionenv}#2%
+      \def\insertblocktitle{\textbf{Sintaxis: }#1}%
+      \par%
+      \mode<presentation>{%
+        \setbeamercolor{block title}{fg=white,bg=mimorado}
+       \setbeamercolor{block body}{fg=black,bg=white!80!mimorado}
+       \setbeamercolor{itemize item}{fg=mimorado}
+       \setbeamertemplate{itemize item}[circle]
+     }%
+      \usebeamertemplate{block begin}}
+    {\par\usebeamertemplate{block end}\end{actionenv}}
+
+
+% BLOQUE DE ACLARACIÓN
+\newenvironment<>{acla}[1]{%
+  \begin{actionenv}#2%
+      \def\insertblocktitle{\textbf{Aclaración: }#1}%
+      \par%
+      \mode<presentation>{%
+        \setbeamercolor{block title}{fg=white,bg=miamarillo}
+       \setbeamercolor{block body}{fg=black,bg=white!80!miamarillo}
+       \setbeamercolor{itemize item}{fg=miamarillo}
+       \setbeamertemplate{itemize item}[circle]
+     }%
+      \usebeamertemplate{block begin}}
+    {\par\usebeamertemplate{block end}\end{actionenv}}
+
+% BLOQUE DE DEFINICIÓN
+\newenvironment<>{defi}[1]{%
+  \begin{actionenv}#2%
+      \def\insertblocktitle{\textbf{Definición: }#1}%
+      \par%
+      \mode<presentation>{%
+        \setbeamercolor{block title}{fg=white,bg=black!5!miazul}
+       \setbeamercolor{block body}{fg=black,bg=white!80!miazul}
+       \setbeamercolor{itemize item}{fg=miazul}
+       \setbeamertemplate{itemize item}[circle]
+     }%
+      \usebeamertemplate{block begin}}
+    {\par\usebeamertemplate{block end}\end{actionenv}}
+
+
+%% PARA EL FONDO DE DIAPOSITIVA
+%\only<beamer| trans>{
+%  \usebackgroundtemplate{\includegraphics[width=\paperwidth]{2011-01-18coffee-stain-background.pdf}}
+%}
+%\only<handout>{
+%  \usebackgroundtemplate{}
+%}

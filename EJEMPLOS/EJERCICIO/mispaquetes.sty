@@ -1,0 +1,61 @@
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{wrapfig}
+\usepackage[backref=section, bookmarks=false]{hyperref}
+\hypersetup{ 
+colorlinks=true,       % false: boxed links; true: colored links
+linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
+citecolor=red,        % color of links to bibliography
+filecolor=magenta,      % color of file links
+urlcolor=cyan,        % color of external links
+}
+\usepackage{bookmark}
+\bookmarksetup{
+  open,
+  openlevel=2,
+  numbered,
+}
+% \usepackage{utilmat}
+\usepackage{graphicx}
+\newtheorem{defi}{Definición}
+\usepackage{epstopdf} 
+\DeclareGraphicsExtensions{.eps,.bmp,.png,.pdf,.jpg}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\setlength{\oddsidemargin}{0.5cm}
+\setlength{\evensidemargin}{0.5cm}
+\setlength{\textwidth}{15.5cm}
+\setlength{\topmargin}{-1.75cm}
+\setlength{\textheight}{25cm}
+\footskip = 1.5cm
+% \usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+\usepackage{boxedminipage}
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}}
+\titleformat{\section}[block]{\LARGE\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{Automatización de una planta de producción industrial} % Custom header text
+\fancyfoot[LE, RO]{\thepage} % Custom footer text
+\fancyfoot[LO, RE]{\includegraphics[width=10mm, keepaspectratio]{Figuras/Logos/escupm}} 
+\newcommand{\hRule}{\rule{\linewidth}{0.4mm}}
+\newcommand{\HRule}{\rule{\linewidth}{0.8mm}}
